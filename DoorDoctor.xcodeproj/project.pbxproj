@@ -14,6 +14,10 @@
 		8C4A4865243D495500F6B20E /* DoorDoctor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4863243D495500F6B20E /* DoorDoctor.xcdatamodeld */; };
 		8C4A4867243D495600F6B20E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4A4866243D495600F6B20E /* Assets.xcassets */; };
 		8C4A486A243D495600F6B20E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4A4868243D495600F6B20E /* LaunchScreen.storyboard */; };
+		8C4A4872243D4CB600F6B20E /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4871243D4CB600F6B20E /* loginViewController.swift */; };
+		8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4873243D4CC800F6B20E /* signupViewController.swift */; };
+		8C4A4876243D4CDB00F6B20E /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4875243D4CDB00F6B20E /* homeViewController.swift */; };
+		8C4A487B243E661600F6B20E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A487A243E661600F6B20E /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		8C4A4866243D495600F6B20E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C4A4869243D495600F6B20E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C4A486B243D495600F6B20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4A4871243D4CB600F6B20E /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		8C4A4873243D4CC800F6B20E /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		8C4A4875243D4CDB00F6B20E /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		8C4A487A243E661600F6B20E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		8C4A4859243D495500F6B20E /* DoorDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				8C4A4877243E65A600F6B20E /* Helpers */,
 				8C4A485A243D495500F6B20E /* AppDelegate.swift */,
 				8C4A485C243D495500F6B20E /* SceneDelegate.swift */,
 				8C4A485E243D495500F6B20E /* ViewController.swift */,
@@ -66,8 +75,19 @@
 				8C4A4868243D495600F6B20E /* LaunchScreen.storyboard */,
 				8C4A486B243D495600F6B20E /* Info.plist */,
 				8C4A4863243D495500F6B20E /* DoorDoctor.xcdatamodeld */,
+				8C4A4871243D4CB600F6B20E /* loginViewController.swift */,
+				8C4A4873243D4CC800F6B20E /* signupViewController.swift */,
+				8C4A4875243D4CDB00F6B20E /* homeViewController.swift */,
 			);
 			path = DoorDoctor;
+			sourceTree = "<group>";
+		};
+		8C4A4877243E65A600F6B20E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8C4A487A243E661600F6B20E /* Utilities.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4A4876243D4CDB00F6B20E /* homeViewController.swift in Sources */,
 				8C4A485F243D495500F6B20E /* ViewController.swift in Sources */,
 				8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */,
 				8C4A4865243D495500F6B20E /* DoorDoctor.xcdatamodeld in Sources */,
 				8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */,
+				8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */,
+				8C4A487B243E661600F6B20E /* Utilities.swift in Sources */,
+				8C4A4872243D4CB600F6B20E /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
