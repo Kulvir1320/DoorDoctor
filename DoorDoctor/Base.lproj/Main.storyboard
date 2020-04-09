@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,27 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zAp-5B-aJN">
-                                <rect key="frame" x="40" y="702" width="334" height="120"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-HF-cTm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1xX-86-NbG">
+                                <rect key="frame" x="50" y="702" width="314" height="110"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU3-w5-ZKF">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJe-bl-iAg">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="P5q-Tj-FxP"/>
+                                            <constraint firstAttribute="height" constant="50" id="D3s-em-zka"/>
                                         </constraints>
-                                        <state key="normal" title="Sign up"/>
+                                        <state key="normal" title="SignUp"/>
                                         <connections>
-                                            <segue destination="KRr-V8-11W" kind="show" id="f46-55-Pjr"/>
+                                            <segue destination="KRr-V8-11W" kind="show" id="GGO-bg-Rq6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58q-SQ-vUH">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bi1-rJ-4d2">
+                                        <rect key="frame" x="0.0" y="60" width="314" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="tn5-H3-NO8"/>
+                                            <constraint firstAttribute="height" constant="50" id="PQb-R3-J6u"/>
                                         </constraints>
-                                        <state key="normal" title="Login in"/>
+                                        <state key="normal" title="LogIn"/>
                                         <connections>
-                                            <segue destination="Xjg-du-atM" kind="show" id="YWO-Ax-3nE"/>
+                                            <segue destination="Xjg-du-atM" kind="show" id="Li7-tf-iBD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -43,16 +47,22 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zAp-5B-aJN" secondAttribute="bottom" constant="40" id="6r1-lN-EKx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zAp-5B-aJN" secondAttribute="trailing" constant="40" id="gV8-LU-xO8"/>
-                            <constraint firstItem="zAp-5B-aJN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="kzc-11-Pfq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1xX-86-NbG" secondAttribute="bottom" constant="50" id="4gO-Es-k0R"/>
+                            <constraint firstItem="bXm-HF-cTm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7JN-Ga-iI9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXm-HF-cTm" secondAttribute="trailing" id="DEu-KM-XI2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1xX-86-NbG" secondAttribute="trailing" constant="50" id="Hct-Z7-Ics"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXm-HF-cTm" secondAttribute="bottom" id="c3s-nE-14L"/>
+                            <constraint firstItem="bXm-HF-cTm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="frw-DA-ckg"/>
+                            <constraint firstItem="1xX-86-NbG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="sIs-UE-lPw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="UmD-nc-0Pa"/>
                     <connections>
-                        <outlet property="LoginButton" destination="58q-SQ-vUH" id="KX4-Ne-r7n"/>
-                        <outlet property="signupButton" destination="bU3-w5-ZKF" id="fGd-jM-THT"/>
+                        <outlet property="LoginButton" destination="Bi1-rJ-4d2" id="rFY-kA-cZZ"/>
+                        <outlet property="signupButton" destination="HJe-bl-iAg" id="k4d-K2-caJ"/>
+                        <outlet property="stack" destination="1xX-86-NbG" id="QMy-AK-uKe"/>
+                        <outlet property="videoLayer" destination="bXm-HF-cTm" id="Znp-dQ-uLw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -256,7 +266,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Agd-rC-s51"/>
-        <segue reference="YWO-Ax-3nE"/>
+        <segue reference="GGO-bg-Rq6"/>
+        <segue reference="Li7-tf-iBD"/>
     </inferredMetricsTieBreakers>
 </document>
