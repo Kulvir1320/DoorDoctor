@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-zZ-cCA">
-                                <rect key="frame" x="30" y="74" width="354" height="230.5"/>
+                                <rect key="frame" x="30" y="118" width="354" height="280.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-8L-QrN">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -87,8 +87,15 @@
                                         </constraints>
                                         <state key="normal" title="LogIn"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Os-wL-FG8">
+                                        <rect key="frame" x="0.0" y="210" width="354" height="30"/>
+                                        <state key="normal" title="Don't have account yet? Signup"/>
+                                        <connections>
+                                            <segue destination="KRr-V8-11W" kind="show" id="Agd-rC-s51"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="990-0D-B4d">
-                                        <rect key="frame" x="0.0" y="210" width="354" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="260" width="354" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -112,6 +119,7 @@
                     <connections>
                         <outlet property="error" destination="990-0D-B4d" id="p6a-RO-xnf"/>
                         <outlet property="login" destination="Mkg-k9-hSt" id="BWW-fn-l9x"/>
+                        <outlet property="passwordTextField" destination="Anw-Zf-HUW" id="o26-P7-5bp"/>
                         <outlet property="usernameTextField" destination="Zhv-8L-QrN" id="p3J-Le-7xr"/>
                     </connections>
                 </viewController>
@@ -152,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nT7-p3-Z1G">
-                                <rect key="frame" x="30" y="74" width="354" height="370.5"/>
+                                <rect key="frame" x="30" y="118" width="354" height="420.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" User name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Chh-iN-aW2">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -184,8 +192,15 @@
                                             <action selector="SignUpButton:" destination="KRr-V8-11W" eventType="touchUpInside" id="dUz-D8-C3i"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Md-qB-fiO">
+                                        <rect key="frame" x="0.0" y="350" width="354" height="30"/>
+                                        <state key="normal" title="Already have a Account? Login "/>
+                                        <connections>
+                                            <segue destination="Xjg-du-atM" kind="show" id="o98-A2-ezR"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrr-zR-OCg">
-                                        <rect key="frame" x="0.0" y="350" width="354" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="400" width="354" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -224,9 +239,10 @@
         <!--Navigation Controller-->
         <scene sceneID="H8s-7S-egt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ipA-Ma-hha" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ipA-Ma-hha" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mym-99-o1Y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -239,4 +255,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Agd-rC-s51"/>
+        <segue reference="YWO-Ax-3nE"/>
+    </inferredMetricsTieBreakers>
 </document>
