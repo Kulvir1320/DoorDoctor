@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4280479E2440261500C43156 /* doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4280479D2440261500C43156 /* doctor.png */; };
 		8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485A243D495500F6B20E /* AppDelegate.swift */; };
 		8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485C243D495500F6B20E /* SceneDelegate.swift */; };
 		8C4A485F243D495500F6B20E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485E243D495500F6B20E /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4280479D2440261500C43156 /* doctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor.png; sourceTree = "<group>"; };
 		8C4A4857243D495500F6B20E /* DoorDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4A485A243D495500F6B20E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C4A485C243D495500F6B20E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		8C4A4859243D495500F6B20E /* DoorDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				4280479D2440261500C43156 /* doctor.png */,
 				8C4A4877243E65A600F6B20E /* Helpers */,
 				8C4A485A243D495500F6B20E /* AppDelegate.swift */,
 				8C4A485C243D495500F6B20E /* SceneDelegate.swift */,
@@ -156,6 +159,7 @@
 			files = (
 				8C4A486A243D495600F6B20E /* LaunchScreen.storyboard in Resources */,
 				BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */,
+				4280479E2440261500C43156 /* doctor.png in Resources */,
 				8C4A4867243D495600F6B20E /* Assets.xcassets in Resources */,
 				8C4A4862243D495500F6B20E /* Main.storyboard in Resources */,
 				BDD74BE1243FE4DF00239FAD /* Cowboy - 33318.mp4 in Resources */,
