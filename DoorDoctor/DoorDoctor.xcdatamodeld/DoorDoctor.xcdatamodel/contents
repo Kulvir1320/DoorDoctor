@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Appointments" representedClassName="Appointments" syncable="YES" codeGenerationType="class">
+        <attribute name="bookedapp" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Doctors" representedClassName="Doctors" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="fname" optional="YES" attributeType="String"/>
+        <attribute name="lname" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="specialist" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Appointments" positionX="-54" positionY="36" width="128" height="73"/>
+        <element name="Doctors" positionX="-36" positionY="45" width="128" height="118"/>
+    </elements>
 </model>
