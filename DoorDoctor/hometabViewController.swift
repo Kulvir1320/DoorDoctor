@@ -1,14 +1,14 @@
 //
-//  homeViewController.swift
+//  hometabViewController.swift
 //  DoorDoctor
 //
-//  Created by Kulvir Dhillon on 2020-04-07.
+//  Created by Amanpreet Kaur on 2020-04-13.
 //  Copyright © 2020 Kulvir Dhillon. All rights reserved.
 //
 
 import UIKit
 
-class homeViewController: UIViewController {
+class hometabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

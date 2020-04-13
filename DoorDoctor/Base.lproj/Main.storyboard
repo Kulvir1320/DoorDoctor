@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,13 +72,13 @@
         <!--Login View Controller-->
         <scene sceneID="fey-WR-8aC">
             <objects>
-                <viewController id="Xjg-du-atM" customClass="loginViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="Xjg-du-atM" customClass="loginViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RzO-FF-fuA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-zZ-cCA">
-                                <rect key="frame" x="30" y="118" width="354" height="280.5"/>
+                                <rect key="frame" x="30" y="30" width="354" height="280.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-8L-QrN">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -97,7 +97,7 @@
                                         </constraints>
                                         <state key="normal" title="LogIn"/>
                                         <connections>
-                                            <segue destination="tn8-8A-LK3" kind="show" id="jR9-zi-ACF"/>
+                                            <action selector="LoginButton:" destination="Xjg-du-atM" eventType="touchUpInside" id="DXK-o8-2qP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Os-wL-FG8">
@@ -201,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="4543" y="-16"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Hometab View Controller-->
         <scene sceneID="7zA-9w-gHU">
             <objects>
-                <tabBarController id="tn8-8A-LK3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="homeviewController" id="tn8-8A-LK3" customClass="hometabViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6L7-rz-yut"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i9A-g0-vJw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -226,11 +226,11 @@
             <objects>
                 <viewController id="KRr-V8-11W" customClass="signupViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fd8-bh-Itd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uGc-jR-0y1">
-                                <rect key="frame" x="30" y="118" width="354" height="354"/>
+                                <rect key="frame" x="30" y="30" width="354" height="354"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" User name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Chh-iN-aW2">
                                         <rect key="frame" x="10" y="0.0" width="334" height="34"/>
@@ -345,7 +345,7 @@
         <image name="square.and.arrow.down.fill" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GGO-bg-Rq6"/>
+        <segue reference="Agd-rC-s51"/>
         <segue reference="o98-A2-ezR"/>
     </inferredMetricsTieBreakers>
 </document>
