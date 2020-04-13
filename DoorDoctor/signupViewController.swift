@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class signupViewController: UIViewController {
     
@@ -20,6 +21,8 @@ class signupViewController: UIViewController {
     @IBOutlet weak var signup: UIButton!
     
     @IBOutlet weak var errorlabel: UILabel!
+    var phn: Int?
+    var un: String?
     
     
     override func viewDidLoad() {
@@ -46,7 +49,187 @@ class signupViewController: UIViewController {
 
     
      @IBAction func SignUpButton(_ sender: UIButton) {
+//        clearCoreData()
+        // create an instance of app delegate
+               let appDelegate = UIApplication.shared.delegate as! AppDelegate
+               // second step is context
+            
+        let managedContext = appDelegate.persistentContainer.viewContext
+        print("--------------------start---------------------")
+        
+        let username = UserNameTextField.text
+        let password = PasswordTextField.text
+        let Email = EmailTextField.text
+        let Phone = Int(PhoneNmberTextField.text ?? "0" ) ?? 0
+        
+        let firstName = firstnametxt.text
+        let lastName = lastnametxt.text
+        
+       
+       
+        
+ 
+         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+        
+        var phonePresent = false
+        var unPresent = false
+        if(username == "" || password == "" || firstName == "" || lastName == "" || Email == "" || Phone == nil){
+       
+            
+            let alert = UIAlertController(title: "OPPs! Something went ", message: "All fields are required for registeration", preferredStyle: UIAlertController.Style.alert)
+
+                                                                                  // add an action (button)
+                          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                                                                                  // show the alert
+                          self.present(alert, animated: true, completion: nil)
+        }
+        else {
+         do {
+    
+                let results = try managedContext.fetch(fetchRequest)
+                if results is [NSManagedObject] {
+                for result in results as! [NSManagedObject] {
+        
+                un = result.value(forKey: "username") as! String
+                phn = result.value(forKey: "phone") as! Int
+        
+                                print("un\(un)")
+                                print("phn\(phn)")
+     
+                                
+                if(Int(PhoneNmberTextField.text!) == phn){
+                                    
+                                    phonePresent = true
+                                    
+                                }
+            if(UserNameTextField.text! == un){
+                                    
+                                    unPresent = true
+                                    
+                                    }
+                                
+                                
+                        }
+            }
+         }
+         catch {
+                print(error)
+                }
+        
+                                
+        print(phonePresent)
+        print(unPresent)
+        if ((phonePresent) || (unPresent)){
+            
+            let alert = UIAlertController(title: "opps! something went ", message: "Sorry you are already register.", preferredStyle: UIAlertController.Style.alert)
+
+                                                                        // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                                                                        // show the alert
+                self.present(alert, animated: true, completion: nil)
+            
+            
+            
+        }else{
+            
+            do {
+                
+                let userEntity = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: managedContext)
+                       userEntity.setValue(Email, forKey: "email")
+                       userEntity.setValue(firstName, forKey: "firstname")
+                        userEntity.setValue(lastName, forKey: "lastname")
+                       userEntity.setValue(password, forKey: "password")
+                       userEntity.setValue(Phone, forKey: "phone")
+                        userEntity.setValue(username, forKey: "username")
+                       
+                      
+                       print("-----------------------------end---------------")
+                
+                try   managedContext.save()
+
+                        let alert = UIAlertController(title: "Congraculations", message: " you are now member of doordoctor", preferredStyle: UIAlertController.Style.alert)
+
+                                                                  // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                                                                  // show the alert
+                    self.present(alert, animated: true, completion: nil)
+                     UserNameTextField.text = ""
+                     PasswordTextField.text = ""
+                     EmailTextField.text = ""
+                     PhoneNmberTextField.text = ""
+                     firstnametxt.text = ""
+                     lastnametxt.text = ""
+                print("Data is Saved")
+            }
+            catch {
+                print(error)
+              print("error")
+            }
+            
+        }
+            
+        // reading database
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+//
+               do {
+
+                    print("---Data inside the database ---")
+                var count = 0
+                   let results = try managedContext.fetch(fetchRequest)
+                   if results is [NSManagedObject] {
+                       for result in results as! [NSManagedObject] {
+
+                        print("row---\(count)\n")
+                        let un = result.value(forKey: "username") as! String
+                        let email = result.value(forKey: "email") as! String
+                        let fn = result.value( forKey: "firstname") as! String
+                         let ln = result.value( forKey: "lastname") as! String
+                       let pw = result.value( forKey: "password") as! String
+                        let ph = result.value(forKey: "phone") as! Int
+
+                        print("\(un)--\(email)--\(pw)--\(fn)--\(ln)--\(ph)")
+
+
+
+                        print("end of row------\n")
+                        count = count + 1
+
+                       }
+                   }
+               } catch {
+                   print(error)
+               }
+
+        
+        }
      }
+    func clearCoreData() {
+           // create an instance of app delegate
+           let appDelegate = UIApplication.shared.delegate as! AppDelegate
+           // second step is context
+           let managedContext = appDelegate.persistentContainer.viewContext
+           // create a fetch request
+           let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+           
+           fetchRequest.returnsObjectsAsFaults = false
+           
+           do {
+               let results = try managedContext.fetch(fetchRequest)
+               for managedObjects in results {
+                   if let managedObjectData = managedObjects as? NSManagedObject {
+                       managedContext.delete(managedObjectData)
+                   }
+               }
+           } catch {
+               print(error)
+           }
+           
+       }
+    
+    
     
     /*
      // MARK: - Navigation
