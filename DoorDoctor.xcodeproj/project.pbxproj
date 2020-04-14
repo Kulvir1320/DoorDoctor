@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		4280479E2440261500C43156 /* doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4280479D2440261500C43156 /* doctor.png */; };
 		61DF0E6F2445670D00E472BA /* BacImg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E6E2445670D00E472BA /* BacImg4.jpg */; };
-		61DF0E7C244567B700E472BA /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E70244567B600E472BA /* img2.jpg */; };
-		61DF0E7D244567B700E472BA /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E71244567B600E472BA /* img5.jpg */; };
-		61DF0E7E244567B700E472BA /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E72244567B600E472BA /* img4.jpg */; };
-		61DF0E7F244567B700E472BA /* img9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E73244567B600E472BA /* img9.jpg */; };
-		61DF0E80244567B700E472BA /* img10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E74244567B600E472BA /* img10.jpg */; };
-		61DF0E81244567B700E472BA /* img7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E75244567B600E472BA /* img7.jpg */; };
-		61DF0E82244567B700E472BA /* img12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E76244567B600E472BA /* img12.jpg */; };
-		61DF0E83244567B700E472BA /* img6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E77244567B700E472BA /* img6.jpg */; };
-		61DF0E84244567B700E472BA /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E78244567B700E472BA /* img1.jpg */; };
-		61DF0E85244567B700E472BA /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E79244567B700E472BA /* img3.jpg */; };
-		61DF0E86244567B700E472BA /* img11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7A244567B700E472BA /* img11.jpg */; };
-		61DF0E87244567B700E472BA /* img8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7B244567B700E472BA /* img8.jpg */; };
+		61DF0E7C244567B700E472BA /* Dr Sofia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E70244567B600E472BA /* Dr Sofia.jpg */; };
+		61DF0E7D244567B700E472BA /* Dr Rashmi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E71244567B600E472BA /* Dr Rashmi.jpg */; };
+		61DF0E7E244567B700E472BA /* Dr Andrew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E72244567B600E472BA /* Dr Andrew.jpg */; };
+		61DF0E7F244567B700E472BA /* Dr Alok.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E73244567B600E472BA /* Dr Alok.jpg */; };
+		61DF0E80244567B700E472BA /* Dr Daniel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E74244567B600E472BA /* Dr Daniel.jpg */; };
+		61DF0E81244567B700E472BA /* Dr Diana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E75244567B600E472BA /* Dr Diana.jpg */; };
+		61DF0E82244567B700E472BA /* Dr David.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E76244567B600E472BA /* Dr David.jpg */; };
+		61DF0E83244567B700E472BA /* Dr Anat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E77244567B700E472BA /* Dr Anat.jpg */; };
+		61DF0E84244567B700E472BA /* Dr Aiden.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E78244567B700E472BA /* Dr Aiden.jpg */; };
+		61DF0E85244567B700E472BA /* Dr Emily.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E79244567B700E472BA /* Dr Emily.jpg */; };
+		61DF0E86244567B700E472BA /* Dr Ronald.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7A244567B700E472BA /* Dr Ronald.jpg */; };
+		61DF0E87244567B700E472BA /* Dr Jessica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7B244567B700E472BA /* Dr Jessica.jpg */; };
 		61DF0E8924456C8800E472BA /* doctorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8824456C8800E472BA /* doctorListViewController.swift */; };
 		61DF0E8B2445730D00E472BA /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8A2445730D00E472BA /* Doctor.swift */; };
 		61DF0E8D244583B700E472BA /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8C244583B700E472BA /* customTableViewCell.swift */; };
@@ -46,18 +46,18 @@
 /* Begin PBXFileReference section */
 		4280479D2440261500C43156 /* doctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor.png; sourceTree = "<group>"; };
 		61DF0E6E2445670D00E472BA /* BacImg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BacImg4.jpg; sourceTree = "<group>"; };
-		61DF0E70244567B600E472BA /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
-		61DF0E71244567B600E472BA /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpg; sourceTree = "<group>"; };
-		61DF0E72244567B600E472BA /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
-		61DF0E73244567B600E472BA /* img9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img9.jpg; sourceTree = "<group>"; };
-		61DF0E74244567B600E472BA /* img10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img10.jpg; sourceTree = "<group>"; };
-		61DF0E75244567B600E472BA /* img7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img7.jpg; sourceTree = "<group>"; };
-		61DF0E76244567B600E472BA /* img12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img12.jpg; sourceTree = "<group>"; };
-		61DF0E77244567B700E472BA /* img6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img6.jpg; sourceTree = "<group>"; };
-		61DF0E78244567B700E472BA /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
-		61DF0E79244567B700E472BA /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
-		61DF0E7A244567B700E472BA /* img11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img11.jpg; sourceTree = "<group>"; };
-		61DF0E7B244567B700E472BA /* img8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img8.jpg; sourceTree = "<group>"; };
+		61DF0E70244567B600E472BA /* Dr Sofia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Sofia.jpg"; sourceTree = "<group>"; };
+		61DF0E71244567B600E472BA /* Dr Rashmi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Rashmi.jpg"; sourceTree = "<group>"; };
+		61DF0E72244567B600E472BA /* Dr Andrew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Andrew.jpg"; sourceTree = "<group>"; };
+		61DF0E73244567B600E472BA /* Dr Alok.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Alok.jpg"; sourceTree = "<group>"; };
+		61DF0E74244567B600E472BA /* Dr Daniel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Daniel.jpg"; sourceTree = "<group>"; };
+		61DF0E75244567B600E472BA /* Dr Diana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Diana.jpg"; sourceTree = "<group>"; };
+		61DF0E76244567B600E472BA /* Dr David.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr David.jpg"; sourceTree = "<group>"; };
+		61DF0E77244567B700E472BA /* Dr Anat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Anat.jpg"; sourceTree = "<group>"; };
+		61DF0E78244567B700E472BA /* Dr Aiden.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Aiden.jpg"; sourceTree = "<group>"; };
+		61DF0E79244567B700E472BA /* Dr Emily.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Emily.jpg"; sourceTree = "<group>"; };
+		61DF0E7A244567B700E472BA /* Dr Ronald.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Ronald.jpg"; sourceTree = "<group>"; };
+		61DF0E7B244567B700E472BA /* Dr Jessica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dr Jessica.jpg"; sourceTree = "<group>"; };
 		61DF0E8824456C8800E472BA /* doctorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doctorListViewController.swift; sourceTree = "<group>"; };
 		61DF0E8A2445730D00E472BA /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		61DF0E8C244583B700E472BA /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,18 +96,18 @@
 		61DF0E6D2445615A00E472BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				61DF0E78244567B700E472BA /* img1.jpg */,
-				61DF0E70244567B600E472BA /* img2.jpg */,
-				61DF0E79244567B700E472BA /* img3.jpg */,
-				61DF0E72244567B600E472BA /* img4.jpg */,
-				61DF0E71244567B600E472BA /* img5.jpg */,
-				61DF0E77244567B700E472BA /* img6.jpg */,
-				61DF0E75244567B600E472BA /* img7.jpg */,
-				61DF0E7B244567B700E472BA /* img8.jpg */,
-				61DF0E73244567B600E472BA /* img9.jpg */,
-				61DF0E74244567B600E472BA /* img10.jpg */,
-				61DF0E7A244567B700E472BA /* img11.jpg */,
-				61DF0E76244567B600E472BA /* img12.jpg */,
+				61DF0E78244567B700E472BA /* Dr Aiden.jpg */,
+				61DF0E70244567B600E472BA /* Dr Sofia.jpg */,
+				61DF0E79244567B700E472BA /* Dr Emily.jpg */,
+				61DF0E72244567B600E472BA /* Dr Andrew.jpg */,
+				61DF0E71244567B600E472BA /* Dr Rashmi.jpg */,
+				61DF0E77244567B700E472BA /* Dr Anat.jpg */,
+				61DF0E75244567B600E472BA /* Dr Diana.jpg */,
+				61DF0E7B244567B700E472BA /* Dr Jessica.jpg */,
+				61DF0E73244567B600E472BA /* Dr Alok.jpg */,
+				61DF0E74244567B600E472BA /* Dr Daniel.jpg */,
+				61DF0E7A244567B700E472BA /* Dr Ronald.jpg */,
+				61DF0E76244567B600E472BA /* Dr David.jpg */,
 				61DF0E6E2445670D00E472BA /* BacImg4.jpg */,
 			);
 			path = Images;
@@ -226,22 +226,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD5070D4244503900070DD5A /* iconAsset.xcassets in Resources */,
-				61DF0E84244567B700E472BA /* img1.jpg in Resources */,
-				61DF0E7F244567B700E472BA /* img9.jpg in Resources */,
-				61DF0E80244567B700E472BA /* img10.jpg in Resources */,
-				61DF0E7E244567B700E472BA /* img4.jpg in Resources */,
-				61DF0E7D244567B700E472BA /* img5.jpg in Resources */,
-				61DF0E81244567B700E472BA /* img7.jpg in Resources */,
+				61DF0E84244567B700E472BA /* Dr Aiden.jpg in Resources */,
+				61DF0E7F244567B700E472BA /* Dr Alok.jpg in Resources */,
+				61DF0E80244567B700E472BA /* Dr Daniel.jpg in Resources */,
+				61DF0E7E244567B700E472BA /* Dr Andrew.jpg in Resources */,
+				61DF0E7D244567B700E472BA /* Dr Rashmi.jpg in Resources */,
+				61DF0E81244567B700E472BA /* Dr Diana.jpg in Resources */,
 				61DF0E6F2445670D00E472BA /* BacImg4.jpg in Resources */,
 				8C4A486A243D495600F6B20E /* LaunchScreen.storyboard in Resources */,
 				BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */,
-				61DF0E7C244567B700E472BA /* img2.jpg in Resources */,
-				61DF0E83244567B700E472BA /* img6.jpg in Resources */,
+				61DF0E7C244567B700E472BA /* Dr Sofia.jpg in Resources */,
+				61DF0E83244567B700E472BA /* Dr Anat.jpg in Resources */,
 				4280479E2440261500C43156 /* doctor.png in Resources */,
-				61DF0E86244567B700E472BA /* img11.jpg in Resources */,
-				61DF0E85244567B700E472BA /* img3.jpg in Resources */,
-				61DF0E82244567B700E472BA /* img12.jpg in Resources */,
-				61DF0E87244567B700E472BA /* img8.jpg in Resources */,
+				61DF0E86244567B700E472BA /* Dr Ronald.jpg in Resources */,
+				61DF0E85244567B700E472BA /* Dr Emily.jpg in Resources */,
+				61DF0E82244567B700E472BA /* Dr David.jpg in Resources */,
+				61DF0E87244567B700E472BA /* Dr Jessica.jpg in Resources */,
 				8C4A4867243D495600F6B20E /* Assets.xcassets in Resources */,
 				8C4A4862243D495500F6B20E /* Main.storyboard in Resources */,
 				BDD74BE1243FE4DF00239FAD /* Cowboy - 33318.mp4 in Resources */,

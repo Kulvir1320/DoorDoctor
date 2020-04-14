@@ -28,18 +28,18 @@ class doctorListViewController: UIViewController,UITableViewDelegate, UITableVie
 
         loadData()
         
-        let d1 = Doctor(id: 1, name: "img1", specialist: "Gyna")
-        let d2 = Doctor(id: 2, name: "img2", specialist: "fdb")
-        let d3 = Doctor(id: 3, name: "img3", specialist: "thr")
-        let d4 = Doctor(id: 4, name: "img4", specialist: "hyt")
-        let d5 = Doctor(id: 5, name: "img5", specialist: "sr5")
-        let d6 = Doctor(id: 6, name: "img6", specialist: "sr5")
-        let d7 = Doctor(id: 7, name: "img7", specialist: "sr5")
-        let d8 = Doctor(id: 8, name: "img8", specialist: "sr5")
-        let d9 = Doctor(id: 9, name: "img9", specialist: "sr5")
-        let d10 = Doctor(id: 10, name: "img10", specialist: "sr5")
-        let d11 = Doctor(id: 11, name: "img11", specialist: "sr5")
-        let d12 = Doctor(id: 12, name: "img12", specialist: "sr5")
+        let d1 = Doctor(id: 1, name: "Dr Aiden", specialist: "Dermatologist")
+        let d2 = Doctor(id: 2, name: "Dr Sofia", specialist: "Gynecologist")
+        let d3 = Doctor(id: 3, name: "Dr Emily", specialist: "Pediatrician")
+        let d4 = Doctor(id: 4, name: "Dr Andrew", specialist: "Family Physician")
+        let d5 = Doctor(id: 5, name: "Dr Rashmi", specialist: "Surgeon")
+        let d6 = Doctor(id: 6, name: "Dr Anat", specialist: "Psychiatrist")
+        let d7 = Doctor(id: 7, name: "Dr Diana", specialist: "Gynecologist")
+        let d8 = Doctor(id: 8, name: "Dr Jessica", specialist: "Dermatologist")
+        let d9 = Doctor(id: 9, name: "Dr Alok", specialist: "Family Physician")
+        let d10 = Doctor(id: 10, name: "Dr Daniel", specialist: "Cardiologist")
+        let d11 = Doctor(id: 11, name: "Dr Ronald", specialist: "Surgeon")
+        let d12 = Doctor(id: 12, name: "Dr David", specialist: "Family Physician")
         
         
         doc = [d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12]
