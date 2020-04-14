@@ -22,6 +22,10 @@
 		61DF0E86244567B700E472BA /* img11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7A244567B700E472BA /* img11.jpg */; };
 		61DF0E87244567B700E472BA /* img8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7B244567B700E472BA /* img8.jpg */; };
 		61DF0E8924456C8800E472BA /* doctorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8824456C8800E472BA /* doctorListViewController.swift */; };
+		61DF0E8B2445730D00E472BA /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8A2445730D00E472BA /* Doctor.swift */; };
+		61DF0E8D244583B700E472BA /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8C244583B700E472BA /* customTableViewCell.swift */; };
+		61DF0E8F24458C1200E472BA /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8E24458C1200E472BA /* BookingViewController.swift */; };
+		61DF0E9124458C4600E472BA /* appointmentBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E9024458C4600E472BA /* appointmentBooking.swift */; };
 		8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485A243D495500F6B20E /* AppDelegate.swift */; };
 		8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485C243D495500F6B20E /* SceneDelegate.swift */; };
 		8C4A485F243D495500F6B20E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485E243D495500F6B20E /* ViewController.swift */; };
@@ -55,6 +59,10 @@
 		61DF0E7A244567B700E472BA /* img11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img11.jpg; sourceTree = "<group>"; };
 		61DF0E7B244567B700E472BA /* img8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img8.jpg; sourceTree = "<group>"; };
 		61DF0E8824456C8800E472BA /* doctorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doctorListViewController.swift; sourceTree = "<group>"; };
+		61DF0E8A2445730D00E472BA /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		61DF0E8C244583B700E472BA /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
+		61DF0E8E24458C1200E472BA /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		61DF0E9024458C4600E472BA /* appointmentBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appointmentBooking.swift; sourceTree = "<group>"; };
 		8C4A4857243D495500F6B20E /* DoorDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4A485A243D495500F6B20E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C4A485C243D495500F6B20E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 				8C4A4863243D495500F6B20E /* DoorDoctor.xcdatamodeld */,
 				8C4A4871243D4CB600F6B20E /* loginViewController.swift */,
 				61DF0E8824456C8800E472BA /* doctorListViewController.swift */,
+				61DF0E8E24458C1200E472BA /* BookingViewController.swift */,
+				61DF0E9024458C4600E472BA /* appointmentBooking.swift */,
+				61DF0E8C244583B700E472BA /* customTableViewCell.swift */,
+				61DF0E8A2445730D00E472BA /* Doctor.swift */,
 				8C4A4873243D4CC800F6B20E /* signupViewController.swift */,
 				BD5070D12444F7B20070DD5A /* hometabViewController.swift */,
 				BD5070D3244503900070DD5A /* iconAsset.xcassets */,
@@ -243,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DF0E8B2445730D00E472BA /* Doctor.swift in Sources */,
 				8C4A485F243D495500F6B20E /* ViewController.swift in Sources */,
+				61DF0E8D244583B700E472BA /* customTableViewCell.swift in Sources */,
 				BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */,
 				8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */,
 				8C4A4865243D495500F6B20E /* DoorDoctor.xcdatamodeld in Sources */,
@@ -251,6 +265,8 @@
 				8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */,
 				8C4A487B243E661600F6B20E /* Utilities.swift in Sources */,
 				61DF0E8924456C8800E472BA /* doctorListViewController.swift in Sources */,
+				61DF0E8F24458C1200E472BA /* BookingViewController.swift in Sources */,
+				61DF0E9124458C4600E472BA /* appointmentBooking.swift in Sources */,
 				BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */,
 				8C4A4872243D4CB600F6B20E /* loginViewController.swift in Sources */,
 			);
