@@ -11,11 +11,17 @@ import UIKit
 class BookingViewController: UIViewController {
 
     @IBOutlet var dateLabel: UITextField!
+    @IBOutlet var timeLabel: UITextField!
+    @IBOutlet var datePickerLabel: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        datePickerLabel?.datePickerMode = .dateAndTime
+               datePickerLabel?.minimumDate = Date.calculateData(day: 1, month: 1, year: 2020, hour: 0, minute: 0)
+               datePickerLabel?.maximumDate = Date.calculateData(day: 31, month: 1, year: 2021, hour: 0, minute: 0)
     }
     
 
@@ -29,4 +35,9 @@ class BookingViewController: UIViewController {
     }
     */
 
+    @IBAction func valueChanged(_ sender: UIDatePicker) {
+        
+        dateLabel?.text = " \(sender.date.getDayMonthYearHourMinuteSecond().day)-\(sender.date.getDayMonthYearHourMinuteSecond().month)-\(sender.date.getDayMonthYearHourMinuteSecond().year)"
+        timeLabel.text = " \(sender.date.getDayMonthYearHourMinuteSecond().hour):\(sender.date.getDayMonthYearHourMinuteSecond().minute)"
+    }
 }
