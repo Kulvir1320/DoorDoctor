@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4280479E2440261500C43156 /* doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4280479D2440261500C43156 /* doctor.png */; };
+		61DF0E6F2445670D00E472BA /* BacImg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E6E2445670D00E472BA /* BacImg4.jpg */; };
+		61DF0E7C244567B700E472BA /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E70244567B600E472BA /* img2.jpg */; };
+		61DF0E7D244567B700E472BA /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E71244567B600E472BA /* img5.jpg */; };
+		61DF0E7E244567B700E472BA /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E72244567B600E472BA /* img4.jpg */; };
+		61DF0E7F244567B700E472BA /* img9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E73244567B600E472BA /* img9.jpg */; };
+		61DF0E80244567B700E472BA /* img10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E74244567B600E472BA /* img10.jpg */; };
+		61DF0E81244567B700E472BA /* img7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E75244567B600E472BA /* img7.jpg */; };
+		61DF0E82244567B700E472BA /* img12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E76244567B600E472BA /* img12.jpg */; };
+		61DF0E83244567B700E472BA /* img6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E77244567B700E472BA /* img6.jpg */; };
+		61DF0E84244567B700E472BA /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E78244567B700E472BA /* img1.jpg */; };
+		61DF0E85244567B700E472BA /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E79244567B700E472BA /* img3.jpg */; };
+		61DF0E86244567B700E472BA /* img11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7A244567B700E472BA /* img11.jpg */; };
+		61DF0E87244567B700E472BA /* img8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61DF0E7B244567B700E472BA /* img8.jpg */; };
+		61DF0E8924456C8800E472BA /* doctorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF0E8824456C8800E472BA /* doctorListViewController.swift */; };
 		8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485A243D495500F6B20E /* AppDelegate.swift */; };
 		8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485C243D495500F6B20E /* SceneDelegate.swift */; };
 		8C4A485F243D495500F6B20E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A485E243D495500F6B20E /* ViewController.swift */; };
@@ -27,6 +41,20 @@
 
 /* Begin PBXFileReference section */
 		4280479D2440261500C43156 /* doctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor.png; sourceTree = "<group>"; };
+		61DF0E6E2445670D00E472BA /* BacImg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BacImg4.jpg; sourceTree = "<group>"; };
+		61DF0E70244567B600E472BA /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
+		61DF0E71244567B600E472BA /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpg; sourceTree = "<group>"; };
+		61DF0E72244567B600E472BA /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
+		61DF0E73244567B600E472BA /* img9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img9.jpg; sourceTree = "<group>"; };
+		61DF0E74244567B600E472BA /* img10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img10.jpg; sourceTree = "<group>"; };
+		61DF0E75244567B600E472BA /* img7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img7.jpg; sourceTree = "<group>"; };
+		61DF0E76244567B600E472BA /* img12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img12.jpg; sourceTree = "<group>"; };
+		61DF0E77244567B700E472BA /* img6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img6.jpg; sourceTree = "<group>"; };
+		61DF0E78244567B700E472BA /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
+		61DF0E79244567B700E472BA /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
+		61DF0E7A244567B700E472BA /* img11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img11.jpg; sourceTree = "<group>"; };
+		61DF0E7B244567B700E472BA /* img8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img8.jpg; sourceTree = "<group>"; };
+		61DF0E8824456C8800E472BA /* doctorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doctorListViewController.swift; sourceTree = "<group>"; };
 		8C4A4857243D495500F6B20E /* DoorDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4A485A243D495500F6B20E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C4A485C243D495500F6B20E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +85,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61DF0E6D2445615A00E472BA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				61DF0E78244567B700E472BA /* img1.jpg */,
+				61DF0E70244567B600E472BA /* img2.jpg */,
+				61DF0E79244567B700E472BA /* img3.jpg */,
+				61DF0E72244567B600E472BA /* img4.jpg */,
+				61DF0E71244567B600E472BA /* img5.jpg */,
+				61DF0E77244567B700E472BA /* img6.jpg */,
+				61DF0E75244567B600E472BA /* img7.jpg */,
+				61DF0E7B244567B700E472BA /* img8.jpg */,
+				61DF0E73244567B600E472BA /* img9.jpg */,
+				61DF0E74244567B600E472BA /* img10.jpg */,
+				61DF0E7A244567B700E472BA /* img11.jpg */,
+				61DF0E76244567B600E472BA /* img12.jpg */,
+				61DF0E6E2445670D00E472BA /* BacImg4.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		8C4A484E243D495500F6B20E = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +124,7 @@
 		8C4A4859243D495500F6B20E /* DoorDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				61DF0E6D2445615A00E472BA /* Images */,
 				4280479D2440261500C43156 /* doctor.png */,
 				8C4A4877243E65A600F6B20E /* Helpers */,
 				8C4A485A243D495500F6B20E /* AppDelegate.swift */,
@@ -89,6 +138,7 @@
 				BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */,
 				8C4A4863243D495500F6B20E /* DoorDoctor.xcdatamodeld */,
 				8C4A4871243D4CB600F6B20E /* loginViewController.swift */,
+				61DF0E8824456C8800E472BA /* doctorListViewController.swift */,
 				8C4A4873243D4CC800F6B20E /* signupViewController.swift */,
 				BD5070D12444F7B20070DD5A /* hometabViewController.swift */,
 				BD5070D3244503900070DD5A /* iconAsset.xcassets */,
@@ -164,9 +214,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD5070D4244503900070DD5A /* iconAsset.xcassets in Resources */,
+				61DF0E84244567B700E472BA /* img1.jpg in Resources */,
+				61DF0E7F244567B700E472BA /* img9.jpg in Resources */,
+				61DF0E80244567B700E472BA /* img10.jpg in Resources */,
+				61DF0E7E244567B700E472BA /* img4.jpg in Resources */,
+				61DF0E7D244567B700E472BA /* img5.jpg in Resources */,
+				61DF0E81244567B700E472BA /* img7.jpg in Resources */,
+				61DF0E6F2445670D00E472BA /* BacImg4.jpg in Resources */,
 				8C4A486A243D495600F6B20E /* LaunchScreen.storyboard in Resources */,
 				BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */,
+				61DF0E7C244567B700E472BA /* img2.jpg in Resources */,
+				61DF0E83244567B700E472BA /* img6.jpg in Resources */,
 				4280479E2440261500C43156 /* doctor.png in Resources */,
+				61DF0E86244567B700E472BA /* img11.jpg in Resources */,
+				61DF0E85244567B700E472BA /* img3.jpg in Resources */,
+				61DF0E82244567B700E472BA /* img12.jpg in Resources */,
+				61DF0E87244567B700E472BA /* img8.jpg in Resources */,
 				8C4A4867243D495600F6B20E /* Assets.xcassets in Resources */,
 				8C4A4862243D495500F6B20E /* Main.storyboard in Resources */,
 				BDD74BE1243FE4DF00239FAD /* Cowboy - 33318.mp4 in Resources */,
@@ -187,6 +250,7 @@
 				8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */,
 				8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */,
 				8C4A487B243E661600F6B20E /* Utilities.swift in Sources */,
+				61DF0E8924456C8800E472BA /* doctorListViewController.swift in Sources */,
 				BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */,
 				8C4A4872243D4CB600F6B20E /* loginViewController.swift in Sources */,
 			);
