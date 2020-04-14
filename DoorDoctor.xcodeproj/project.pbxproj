@@ -19,6 +19,8 @@
 		8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4873243D4CC800F6B20E /* signupViewController.swift */; };
 		8C4A487B243E661600F6B20E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A487A243E661600F6B20E /* Utilities.swift */; };
 		BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D12444F7B20070DD5A /* hometabViewController.swift */; };
+		BD5070D4244503900070DD5A /* iconAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5070D3244503900070DD5A /* iconAsset.xcassets */; };
+		BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D524451A1A0070DD5A /* Designable Text Field.swift */; };
 		BDD74BE1243FE4DF00239FAD /* Cowboy - 33318.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */; };
 		BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		8C4A4873243D4CC800F6B20E /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
 		8C4A487A243E661600F6B20E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BD5070D12444F7B20070DD5A /* hometabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hometabViewController.swift; sourceTree = "<group>"; };
+		BD5070D3244503900070DD5A /* iconAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iconAsset.xcassets; sourceTree = "<group>"; };
+		BD5070D524451A1A0070DD5A /* Designable Text Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Designable Text Field.swift"; sourceTree = "<group>"; };
 		BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cowboy - 33318.mp4"; sourceTree = "<group>"; };
 		BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Doctor - 29643.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,8 @@
 				8C4A4871243D4CB600F6B20E /* loginViewController.swift */,
 				8C4A4873243D4CC800F6B20E /* signupViewController.swift */,
 				BD5070D12444F7B20070DD5A /* hometabViewController.swift */,
+				BD5070D3244503900070DD5A /* iconAsset.xcassets */,
+				BD5070D524451A1A0070DD5A /* Designable Text Field.swift */,
 			);
 			path = DoorDoctor;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5070D4244503900070DD5A /* iconAsset.xcassets in Resources */,
 				8C4A486A243D495600F6B20E /* LaunchScreen.storyboard in Resources */,
 				BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */,
 				4280479E2440261500C43156 /* doctor.png in Resources */,
@@ -174,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4A485F243D495500F6B20E /* ViewController.swift in Sources */,
+				BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */,
 				8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */,
 				8C4A4865243D495500F6B20E /* DoorDoctor.xcdatamodeld in Sources */,
 				8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */,

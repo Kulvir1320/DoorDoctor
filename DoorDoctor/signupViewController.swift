@@ -76,7 +76,7 @@ class signupViewController: UIViewController {
         if(username == "" || password == "" || firstName == "" || lastName == "" || Email == "" || Phone == nil){
        
             
-            let alert = UIAlertController(title: "OPPs! Something went ", message: "All fields are required for registeration", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "OPPs! Something went ", message: "All fields are required for Registration", preferredStyle: UIAlertController.Style.alert)
 
                                                                                   // add an action (button)
                           alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -122,7 +122,7 @@ class signupViewController: UIViewController {
         print(unPresent)
         if ((phonePresent) || (unPresent)){
             
-            let alert = UIAlertController(title: "opps! something went ", message: "Sorry you are already register.", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "OPPS! something went ", message: "Sorry you are already registered.", preferredStyle: UIAlertController.Style.alert)
 
                                                                         // add an action (button)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -149,7 +149,7 @@ class signupViewController: UIViewController {
                 
                 try   managedContext.save()
 
-                        let alert = UIAlertController(title: "Congraculations", message: " you are now member of doordoctor", preferredStyle: UIAlertController.Style.alert)
+                        let alert = UIAlertController(title: "Congratulations", message: " You are now member of DoorDoctor", preferredStyle: UIAlertController.Style.alert)
 
                                                                   // add an action (button)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
