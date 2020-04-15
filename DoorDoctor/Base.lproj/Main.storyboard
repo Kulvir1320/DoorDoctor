@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -164,17 +164,45 @@
             </objects>
             <point key="canvasLocation" x="3577" y="432"/>
         </scene>
-        <!--Item 1-->
+        <!--Search-->
         <scene sceneID="gQe-NG-KZ3">
             <objects>
-                <viewController id="bQ5-4Q-bgk" sceneMemberID="viewController">
+                <viewController id="bQ5-4Q-bgk" customClass="SearchRemedieVC" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ply-sc-TSA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Sp8-Mk-pp2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wq6-4B-MWW">
+                                <rect key="frame" x="10" y="115" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7LR-ZK-zQ8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="searchBA:" destination="bQ5-4Q-bgk" eventType="touchUpInside" id="pxb-mf-qgc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sp8-Mk-pp2" firstAttribute="leading" secondItem="8oh-oW-Fry" secondAttribute="leading" id="0rv-lo-27M"/>
+                            <constraint firstItem="wq6-4B-MWW" firstAttribute="top" secondItem="Sp8-Mk-pp2" secondAttribute="bottom" constant="15" id="Gkx-r7-clG"/>
+                            <constraint firstItem="8oh-oW-Fry" firstAttribute="trailing" secondItem="wq6-4B-MWW" secondAttribute="trailing" constant="10" id="LiK-WS-AIA"/>
+                            <constraint firstAttribute="trailing" secondItem="Sp8-Mk-pp2" secondAttribute="trailing" symbolic="YES" id="Vrn-d6-8uk"/>
+                            <constraint firstItem="Sp8-Mk-pp2" firstAttribute="top" secondItem="8oh-oW-Fry" secondAttribute="top" id="dwJ-54-2rG"/>
+                            <constraint firstItem="wq6-4B-MWW" firstAttribute="leading" secondItem="8oh-oW-Fry" secondAttribute="leading" constant="10" id="nd6-N2-1fQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8oh-oW-Fry"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="square.and.arrow.down.fill" catalog="system" id="JWb-EX-YPs"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="JWb-EX-YPs"/>
+                    <connections>
+                        <outlet property="sButtonLbl" destination="wq6-4B-MWW" id="KRp-mY-ljj"/>
+                        <outlet property="searchRemd" destination="Sp8-Mk-pp2" id="Fix-7c-PF4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S88-Ts-gCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,16 +502,16 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BacImg4.jpg" width="292" height="404"/>
+        <image name="eye" catalog="system" width="64" height="40"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
+        <image name="pencil.circle" catalog="system" width="64" height="60"/>
+        <image name="person.crop.square" catalog="system" width="64" height="56"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Agd-rC-s51"/>
         <segue reference="o98-A2-ezR"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <image name="BacImg4.jpg" width="292" height="404"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="81"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="person.crop.square" catalog="system" width="128" height="114"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
-    </resources>
 </document>
