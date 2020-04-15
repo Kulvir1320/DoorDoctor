@@ -1,5 +1,5 @@
 //
-//  SearchRemedieVC.swift
+//  PlayVC.swift
 //  DoorDoctor
 //
 //  Created by Evneet kaur on 2020-04-15.
@@ -7,20 +7,24 @@
 //
 
 import UIKit
+import WebKit
 
-class SearchRemedieVC: UIViewController {
+class PlayVC: UIViewController {
     
+    var item : Item?
     
-    @IBOutlet weak var searchRemd: UISearchBar!
-    
-    @IBOutlet weak var sButtonLbl: UIButton!
-    
+    var webView: WKWebView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        Utilities.styleFilledButton(sButtonLbl)
+        webView = WKWebView(frame: view.frame)
+        view.addSubview(webView!)
+        
+        start()
+        
     }
     
 
@@ -33,15 +37,12 @@ class SearchRemedieVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    @IBAction func searchBA(_ sender: Any) {
-        
-        let searchtext = searchRemd.text! + " remedie"
-        
-        fetchVideos(remediName: searchtext)
-        
-        
+    func start(){
+        DispatchQueue.main.async {
+            let request = URLRequest(url: URL(string: PLAY_URL + (self.item?.id.videoID)!)!)
+            
+            self.webView?.load(request)
+        }
     }
-    
+
 }

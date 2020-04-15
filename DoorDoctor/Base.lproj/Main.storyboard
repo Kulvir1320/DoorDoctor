@@ -184,6 +184,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="searchBA:" destination="bQ5-4Q-bgk" eventType="touchUpInside" id="pxb-mf-qgc"/>
+                                    <segue destination="0ke-3p-2zf" kind="show" id="WiJ-kt-ZrJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -207,6 +208,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S88-Ts-gCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3516" y="-454"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Kxe-yj-Uan">
+            <objects>
+                <tableViewController id="0ke-3p-2zf" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cYI-ub-s19">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="remediecCell" id="V45-3y-JBV">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V45-3y-JBV" id="tyQ-QM-bT0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pcB-cN-QKF" kind="show" id="ixO-YC-mhF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0ke-3p-2zf" id="Pv6-MY-UVJ"/>
+                            <outlet property="delegate" destination="0ke-3p-2zf" id="Cip-eh-ZSM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6hZ-IB-8gW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHh-cI-LTN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4439" y="-796"/>
+        </scene>
+        <!--PlayVC-->
+        <scene sceneID="nQP-dC-58l">
+            <objects>
+                <viewController id="pcB-cN-QKF" customClass="PlayVC" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6mb-dp-Tp6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DQX-ie-eWi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xv3-GI-Ux1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAl-qo-K0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5436" y="-800"/>
         </scene>
         <!--Item-->
         <scene sceneID="Sfe-Cc-BnB">
