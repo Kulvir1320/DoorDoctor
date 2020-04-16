@@ -2,12 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Appointments" representedClassName="Appointments" syncable="YES" codeGenerationType="class">
         <attribute name="dName" optional="YES" attributeType="String"/>
-        <attribute name="uDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="uDate" optional="YES" attributeType="String"/>
         <attribute name="uEmail" optional="YES" attributeType="String"/>
         <attribute name="uGender" optional="YES" attributeType="String"/>
         <attribute name="uName" optional="YES" attributeType="String"/>
         <attribute name="uPhone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="uTime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="uTime" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Doctors" representedClassName="Doctors" syncable="YES" codeGenerationType="class">
         <attribute name="dName" optional="YES" attributeType="String"/>
