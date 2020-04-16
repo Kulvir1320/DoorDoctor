@@ -43,6 +43,7 @@
 		8C4A4872243D4CB600F6B20E /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4871243D4CB600F6B20E /* loginViewController.swift */; };
 		8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4873243D4CC800F6B20E /* signupViewController.swift */; };
 		8C4A487B243E661600F6B20E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A487A243E661600F6B20E /* Utilities.swift */; };
+		8CC8F2742447E23A00A7C037 /* userAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8F2732447E23A00A7C037 /* userAccount.swift */; };
 		BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D12444F7B20070DD5A /* hometabViewController.swift */; };
 		BD5070D4244503900070DD5A /* iconAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5070D3244503900070DD5A /* iconAsset.xcassets */; };
 		BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D524451A1A0070DD5A /* Designable Text Field.swift */; };
@@ -89,6 +90,7 @@
 		8C4A4871243D4CB600F6B20E /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		8C4A4873243D4CC800F6B20E /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
 		8C4A487A243E661600F6B20E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8CC8F2732447E23A00A7C037 /* userAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userAccount.swift; sourceTree = "<group>"; };
 		BD5070D12444F7B20070DD5A /* hometabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hometabViewController.swift; sourceTree = "<group>"; };
 		BD5070D3244503900070DD5A /* iconAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iconAsset.xcassets; sourceTree = "<group>"; };
 		BD5070D524451A1A0070DD5A /* Designable Text Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Designable Text Field.swift"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				428047F824479F0700C43156 /* VideoData.swift */,
 				428047FA2447AA0E00C43156 /* RemedieTVC.swift */,
 				428047FC2447AC5700C43156 /* PlayVC.swift */,
+				8CC8F2732447E23A00A7C037 /* userAccount.swift */,
 			);
 			path = DoorDoctor;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */,
 				8C4A487B243E661600F6B20E /* Utilities.swift in Sources */,
 				61C79CB32447CB1A008E98BE /* BookingModal.swift in Sources */,
+				8CC8F2742447E23A00A7C037 /* userAccount.swift in Sources */,
 				61DF0E8924456C8800E472BA /* doctorListViewController.swift in Sources */,
 				428047F724479EB600C43156 /* helperR.swift in Sources */,
 				61DF0E8F24458C1200E472BA /* BookingViewController.swift in Sources */,

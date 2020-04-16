@@ -19,7 +19,7 @@ class loginViewController: UIViewController {
     @IBOutlet weak var error: UILabel!
     var un: String?
     var pass: String?
-    
+    var useraccount: [userAccount]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,7 @@ class loginViewController: UIViewController {
 //               addLeftImageTo(textField: passwordTextField, andImage: passImage!)
 
         // Do any additional setup after loading the view.
+         useraccount = [userAccount]()
          setUpElements()
     }
     
@@ -63,9 +64,7 @@ class loginViewController: UIViewController {
 ////
     
     
-    
-    
-    
+
     
     
     func setUpElements() {
@@ -84,49 +83,21 @@ class loginViewController: UIViewController {
     
     
     @IBAction func LoginButton(_ sender: UIButton) {
+         
       
         print("login")
 
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-               // second step is context
-
-        let managedContext = appDelegate.persistentContainer.viewContext
-
+//
         let username = usernameTextField.text
         let password = passwordTextField.text
 
-
-
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
-        
-        
-
-        do {
-
-                       let results = try managedContext.fetch(fetchRequest)
-                       if results is [NSManagedObject] {
-                        for result in results as! [NSManagedObject] {
-
-                           un = result.value(forKey: "username") as! String
-                          pass = result.value(forKey: "password") as! String
-                            print(un)
-                            print(pass)
-
-                        }
-
-
-
-
-
-            }
-
-        }
-        catch {
-                       print(error)
-                       }
-        
+//
+//
+//
+//
+        CheckForUserNameAndPasswordMatch(username: username!, password: password!)
         if(username == "" || password == ""){
-           
+
             let alert = UIAlertController(title: "OPPs! Something went wrong ", message: "All fields are mandatory for Login", preferredStyle: UIAlertController.Style.alert)
 
                                                                     // add an action (button)
@@ -135,43 +106,16 @@ class loginViewController: UIViewController {
                                                                     // show the alert
             self.present(alert, animated: true, completion: nil)
         }
-//
+////
         else {
-        if (un == username && pass == password) {
-            loadHomeScreen()
-            
-            let alert = UIAlertController(title: "Welcome \(username!)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
 
-                                                                             // add an action (button)
-                               alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                             // show the alert
-                               self.present(alert, animated: true, completion: nil)
-
-                                  print("You are login Successfully")
-            
-
-                              }
-                              else {
-            let alert = UIAlertController(title: "OPPS! Something went wrong", message: "Username or Password is not Registered", preferredStyle: UIAlertController.Style.alert)
-
-                                                                                        // add an action (button)
-                                          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                                        // show the alert
-                                          self.present(alert, animated: true, completion: nil)
-                                  print("Please check your fields")
-                              }
+//
+//                                                                                        // add
+            CheckForUserNameAndPasswordMatch(username: username!, password: password!)
+            usernameTextField.text = ""
+            passwordTextField.text = ""
         }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     }
     func loadHomeScreen(){
 //        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -188,4 +132,63 @@ class loginViewController: UIViewController {
         }
     }
     
-}
+    
+    func CheckForUserNameAndPasswordMatch( username: String, password : String)
+    {
+        let app = UIApplication.shared.delegate as! AppDelegate
+
+        let context = app.persistentContainer.viewContext
+
+        let fetchrequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+
+        let predicate = NSPredicate(format: "username = %@", username)
+
+        fetchrequest.predicate = predicate
+        do
+        {
+            let result = try context.fetch(fetchrequest) as NSArray
+
+            if result.count>0
+            {
+                let objectentity = result.firstObject as! UserInfo
+
+                if objectentity.username == username && objectentity.password == password
+                {
+                    loadHomeScreen()
+                    let alert = UIAlertController(title: "Welcome \(username)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
+                    
+                                                                                                 // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    
+                                                                                                 // show the alert
+                    self.present(alert, animated: true, completion: nil)
+                    
+                                                      print("You are login Successfully")
+                }
+                else
+                {
+                    
+        let alert = UIAlertController(title: "OPPS! Something went wrong", message: "Username or Password is not Registered", preferredStyle: UIAlertController.Style.alert)
+                    //
+                                                                                                            // add an action (button)
+    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    
+                                                                                                            // show the alert
+                self.present(alert, animated: true, completion: nil)
+                    //                                  print("Please check your fields")
+                    print("Wrong username or password !!!---")
+                }
+            }
+        }
+
+        catch
+        {
+            let fetch_error = error as NSError
+            print("error", fetch_error.localizedDescription)
+        }
+
+    }
+    
+    }
+    
+

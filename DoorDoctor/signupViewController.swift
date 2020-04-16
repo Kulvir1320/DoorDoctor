@@ -23,13 +23,14 @@ class signupViewController: UIViewController {
     @IBOutlet weak var errorlabel: UILabel!
     var phn: Int?
     var un: String?
-    
+    var useraccount: [userAccount]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setUpElements()
+          useraccount = [userAccount]()
     }
     func setUpElements() {
       
@@ -57,18 +58,18 @@ class signupViewController: UIViewController {
         let managedContext = appDelegate.persistentContainer.viewContext
         print("--------------------start---------------------")
         
-        let username = UserNameTextField.text
-        let password = PasswordTextField.text
-        let Email = EmailTextField.text
+        let username = UserNameTextField.text as! String
+        let password = PasswordTextField.text as! String
+        let Email = EmailTextField.text as! String
         let Phone = Int(PhoneNmberTextField.text ?? "0" ) ?? 0
         
-        let firstName = firstnametxt.text
-        let lastName = lastnametxt.text
+        let firstName = firstnametxt.text as! String
+        let lastName = lastnametxt.text as! String
         
        
        
-        
- 
+        let u = userAccount(username: username, password: password,firstname: firstName, lastname: lastName, phone: Phone,Email: Email )
+        useraccount?.append(u)
          let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
         
         var phonePresent = false
@@ -135,14 +136,14 @@ class signupViewController: UIViewController {
         }else{
             
             do {
-                
+                for user in useraccount!{
                 let userEntity = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: managedContext)
-                       userEntity.setValue(Email, forKey: "email")
-                       userEntity.setValue(firstName, forKey: "firstname")
-                        userEntity.setValue(lastName, forKey: "lastname")
-                       userEntity.setValue(password, forKey: "password")
-                       userEntity.setValue(Phone, forKey: "phone")
-                        userEntity.setValue(username, forKey: "username")
+                    userEntity.setValue(user.Email, forKey: "email")
+                       userEntity.setValue(user.firstname, forKey: "firstname")
+                    userEntity.setValue(user.lastname, forKey: "lastname")
+                    userEntity.setValue(user.password, forKey: "password")
+                    userEntity.setValue(user.phone, forKey: "phone")
+                    userEntity.setValue(user.username, forKey: "username")
                        
                       
                        print("-----------------------------end---------------")
@@ -162,13 +163,16 @@ class signupViewController: UIViewController {
                      PhoneNmberTextField.text = ""
                      firstnametxt.text = ""
                      lastnametxt.text = ""
-                print("Data is Saved")
+                    print("Data is Saved")
+                    
+                }
+                
             }
             catch {
                 print(error)
               print("error")
             }
-            
+//            }
         }
             
         // reading database
