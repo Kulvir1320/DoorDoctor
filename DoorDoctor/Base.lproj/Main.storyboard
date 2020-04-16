@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -396,7 +396,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ij2-rx-lda">
-                                <rect key="frame" x="20" y="140" width="374" height="593.5"/>
+                                <rect key="frame" x="20" y="140" width="374" height="539.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQS-G1-qzx">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -409,23 +409,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GpB-kw-aZ8">
+                                    <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GpB-kw-aZ8" userLabel="UAge Txt Field">
                                         <rect key="frame" x="0.0" y="94.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l70-u9-DfR">
+                                    <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyz-WJ-rHf">
                                         <rect key="frame" x="0.0" y="148.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyz-WJ-rHf">
-                                        <rect key="frame" x="0.0" y="202.5" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="4dX-gi-Qgm">
-                                        <rect key="frame" x="0.0" y="256.5" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="202.5" width="374" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWX-iB-cmd">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="34"/>
@@ -440,13 +435,13 @@
                                         </subviews>
                                     </stackView>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-if-EzN">
-                                        <rect key="frame" x="0.0" y="310.5" width="374" height="216"/>
+                                        <rect key="frame" x="0.0" y="256.5" width="374" height="216"/>
                                         <connections>
                                             <action selector="valueChanged:" destination="rZF-Ps-15F" eventType="valueChanged" id="jh6-Rr-0gz"/>
                                         </connections>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="645-lY-Hc5">
-                                        <rect key="frame" x="0.0" y="546.5" width="374" height="47"/>
+                                        <rect key="frame" x="0.0" y="492.5" width="374" height="47"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" title="Book">
@@ -489,10 +484,10 @@
                         <outlet property="dateLabel" destination="RWX-iB-cmd" id="bhl-1Y-Uqh"/>
                         <outlet property="datePickerLabel" destination="xvT-if-EzN" id="mOO-o1-ddx"/>
                         <outlet property="timeLabel" destination="UhM-Ux-sdK" id="1CH-en-CAu"/>
+                        <outlet property="uAgeTxtField" destination="GpB-kw-aZ8" id="YGg-EF-6U3"/>
                         <outlet property="uEmailTxtField" destination="GpB-kw-aZ8" id="uzn-rc-qKk"/>
                         <outlet property="uGenderTxtField" destination="uyz-WJ-rHf" id="TdP-Az-iY1"/>
                         <outlet property="uNameTxtField" destination="IZP-bW-3lJ" id="bsE-6N-NIf"/>
-                        <outlet property="uPhoneTxtField" destination="l70-u9-DfR" id="cby-jG-STM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bu9-4d-KpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -637,16 +632,16 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="BacImg4.jpg" width="292" height="404"/>
-        <image name="eye" catalog="system" width="64" height="40"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
-        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
-        <image name="pencil.circle" catalog="system" width="64" height="60"/>
-        <image name="person.crop.square" catalog="system" width="64" height="56"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Agd-rC-s51"/>
         <segue reference="o98-A2-ezR"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="BacImg4.jpg" width="292" height="404"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="81"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+    </resources>
 </document>

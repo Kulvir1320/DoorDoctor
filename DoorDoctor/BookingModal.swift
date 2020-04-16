@@ -12,17 +12,17 @@ import Foundation
 class BookingModal {
     var dName: String
     var uName: String
-    var Email: String
+    var Age: Int
     var Gender: String
     var Phone: Int
     var uDate: String
     var uTime: String
     
     
-    init(dName: String, uName: String , Email: String, Gender: String,Phone: Int, uDate: String, uTime: String ) {
+    init(dName: String, uName: String , Age: Int, Gender: String,Phone: Int, uDate: String, uTime: String ) {
         self.dName = dName
         self.uName = uName
-        self.Email = Email
+        self.Age = Age
         self.Gender = Gender
         self.Phone = Phone
         self.uDate = uDate
