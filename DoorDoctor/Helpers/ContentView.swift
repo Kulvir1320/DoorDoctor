@@ -7,11 +7,23 @@
 //
 
 import SwiftUI
-import MapKit
+
 
 struct ContentView: View {
+    @State private var search: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .top) {
+            
+            MapView()
+            
+            TextField("Search", text: $search, onEditingChanged: { _ in })
+            {
+                
+            }.textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding()
+                .offset(y: 44)
+        }
     }
 }
 

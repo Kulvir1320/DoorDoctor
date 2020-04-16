@@ -49,6 +49,11 @@
 		BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D524451A1A0070DD5A /* Designable Text Field.swift */; };
 		BD571F852448E2C5000A24A6 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F842448E2C5000A24A6 /* MapVC.swift */; };
 		BD571F872448E492000A24A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F862448E492000A24A6 /* ContentView.swift */; };
+		BD571F8C2448E98D000A24A6 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F8B2448E98D000A24A6 /* Landmark.swift */; };
+		BD571F8E2448E9AB000A24A6 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F8D2448E9AB000A24A6 /* LandmarkAnnotation.swift */; };
+		BD571F902448E9DD000A24A6 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F8F2448E9DD000A24A6 /* LocalManager.swift */; };
+		BD571F922448E9FE000A24A6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F912448E9FE000A24A6 /* MapView.swift */; };
+		BD571F942448EA23000A24A6 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F932448EA23000A24A6 /* PlaceListView.swift */; };
 		BDD74BE1243FE4DF00239FAD /* Cowboy - 33318.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */; };
 		BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */; };
 /* End PBXBuildFile section */
@@ -98,6 +103,11 @@
 		BD5070D524451A1A0070DD5A /* Designable Text Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Designable Text Field.swift"; sourceTree = "<group>"; };
 		BD571F842448E2C5000A24A6 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		BD571F862448E492000A24A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BD571F8B2448E98D000A24A6 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		BD571F8D2448E9AB000A24A6 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
+		BD571F8F2448E9DD000A24A6 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
+		BD571F912448E9FE000A24A6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BD571F932448EA23000A24A6 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
 		BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cowboy - 33318.mp4"; sourceTree = "<group>"; };
 		BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Doctor - 29643.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +162,9 @@
 		8C4A4859243D495500F6B20E /* DoorDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				BD571F8A2448E932000A24A6 /* ViewsSwiftUI */,
+				BD571F892448E90D000A24A6 /* ManagersSwiftUI */,
+				BD571F882448E8E1000A24A6 /* ModelSwiftUI */,
 				61DF0E6D2445615A00E472BA /* Images */,
 				4280479D2440261500C43156 /* doctor.png */,
 				8C4A4877243E65A600F6B20E /* Helpers */,
@@ -195,6 +208,32 @@
 				BD571F862448E492000A24A6 /* ContentView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BD571F882448E8E1000A24A6 /* ModelSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				BD571F8B2448E98D000A24A6 /* Landmark.swift */,
+				BD571F8D2448E9AB000A24A6 /* LandmarkAnnotation.swift */,
+			);
+			path = ModelSwiftUI;
+			sourceTree = "<group>";
+		};
+		BD571F892448E90D000A24A6 /* ManagersSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				BD571F8F2448E9DD000A24A6 /* LocalManager.swift */,
+			);
+			path = ManagersSwiftUI;
+			sourceTree = "<group>";
+		};
+		BD571F8A2448E932000A24A6 /* ViewsSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				BD571F912448E9FE000A24A6 /* MapView.swift */,
+				BD571F932448EA23000A24A6 /* PlaceListView.swift */,
+			);
+			path = ViewsSwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +328,15 @@
 				8C4A485F243D495500F6B20E /* ViewController.swift in Sources */,
 				BD571F872448E492000A24A6 /* ContentView.swift in Sources */,
 				428047FD2447AC5700C43156 /* PlayVC.swift in Sources */,
+				BD571F942448EA23000A24A6 /* PlaceListView.swift in Sources */,
+				BD571F8C2448E98D000A24A6 /* Landmark.swift in Sources */,
+				BD571F902448E9DD000A24A6 /* LocalManager.swift in Sources */,
 				61DF0E8D244583B700E472BA /* customTableViewCell.swift in Sources */,
 				428047FB2447AA0E00C43156 /* RemedieTVC.swift in Sources */,
 				BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */,
 				8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */,
 				428047F924479F0700C43156 /* VideoData.swift in Sources */,
+				BD571F8E2448E9AB000A24A6 /* LandmarkAnnotation.swift in Sources */,
 				BD571F852448E2C5000A24A6 /* MapVC.swift in Sources */,
 				8C4A4865243D495500F6B20E /* DoorDoctor.xcdatamodeld in Sources */,
 				8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */,
@@ -303,6 +346,7 @@
 				61C79CB32447CB1A008E98BE /* BookingModal.swift in Sources */,
 				8CC8F2742447E23A00A7C037 /* userAccount.swift in Sources */,
 				61DF0E8924456C8800E472BA /* doctorListViewController.swift in Sources */,
+				BD571F922448E9FE000A24A6 /* MapView.swift in Sources */,
 				428047F724479EB600C43156 /* helperR.swift in Sources */,
 				61DF0E8F24458C1200E472BA /* BookingViewController.swift in Sources */,
 				61DF0E9124458C4600E472BA /* appointmentBooking.swift in Sources */,
