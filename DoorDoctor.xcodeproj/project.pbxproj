@@ -47,6 +47,8 @@
 		BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D12444F7B20070DD5A /* hometabViewController.swift */; };
 		BD5070D4244503900070DD5A /* iconAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5070D3244503900070DD5A /* iconAsset.xcassets */; };
 		BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D524451A1A0070DD5A /* Designable Text Field.swift */; };
+		BD571F852448E2C5000A24A6 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F842448E2C5000A24A6 /* MapVC.swift */; };
+		BD571F872448E492000A24A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F862448E492000A24A6 /* ContentView.swift */; };
 		BDD74BE1243FE4DF00239FAD /* Cowboy - 33318.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */; };
 		BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,8 @@
 		BD5070D12444F7B20070DD5A /* hometabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hometabViewController.swift; sourceTree = "<group>"; };
 		BD5070D3244503900070DD5A /* iconAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iconAsset.xcassets; sourceTree = "<group>"; };
 		BD5070D524451A1A0070DD5A /* Designable Text Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Designable Text Field.swift"; sourceTree = "<group>"; };
+		BD571F842448E2C5000A24A6 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		BD571F862448E492000A24A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cowboy - 33318.mp4"; sourceTree = "<group>"; };
 		BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Doctor - 29643.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +182,7 @@
 				428047FA2447AA0E00C43156 /* RemedieTVC.swift */,
 				428047FC2447AC5700C43156 /* PlayVC.swift */,
 				8CC8F2732447E23A00A7C037 /* userAccount.swift */,
+				BD571F842448E2C5000A24A6 /* MapVC.swift */,
 			);
 			path = DoorDoctor;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			children = (
 				8C4A487A243E661600F6B20E /* Utilities.swift */,
 				428047F624479EB600C43156 /* helperR.swift */,
+				BD571F862448E492000A24A6 /* ContentView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,12 +287,14 @@
 			files = (
 				61DF0E8B2445730D00E472BA /* Doctor.swift in Sources */,
 				8C4A485F243D495500F6B20E /* ViewController.swift in Sources */,
+				BD571F872448E492000A24A6 /* ContentView.swift in Sources */,
 				428047FD2447AC5700C43156 /* PlayVC.swift in Sources */,
 				61DF0E8D244583B700E472BA /* customTableViewCell.swift in Sources */,
 				428047FB2447AA0E00C43156 /* RemedieTVC.swift in Sources */,
 				BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */,
 				8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */,
 				428047F924479F0700C43156 /* VideoData.swift in Sources */,
+				BD571F852448E2C5000A24A6 /* MapVC.swift in Sources */,
 				8C4A4865243D495500F6B20E /* DoorDoctor.xcdatamodeld in Sources */,
 				8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */,
 				428047F524479D8400C43156 /* Remedies.swift in Sources */,
