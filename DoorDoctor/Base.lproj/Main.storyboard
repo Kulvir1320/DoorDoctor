@@ -74,11 +74,11 @@
             <objects>
                 <viewController storyboardIdentifier="loginViewController" id="Xjg-du-atM" customClass="loginViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RzO-FF-fuA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-zZ-cCA">
-                                <rect key="frame" x="30" y="30" width="354" height="280.5"/>
+                                <rect key="frame" x="30" y="118" width="354" height="280.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-8L-QrN" customClass="Designable_Text_Field" customModule="DoorDoctor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -181,17 +181,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQr-kY-kzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3576.811594202899" y="431.91964285714283"/>
-        </scene>
-        <!--Hosting Controller-->
-        <scene sceneID="FK5-5B-jwC">
-            <objects>
-                <hostingController id="bSm-Hs-hgj" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="lKG-ZB-G79"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                </hostingController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RW9-W9-uHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4580" y="778"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="YAZ-zu-Ph2">
@@ -611,6 +600,7 @@
                 <tabBarController storyboardIdentifier="homeviewController" id="tn8-8A-LK3" customClass="hometabViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6L7-rz-yut">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="0JC-Wl-Eds" userLabel="user">
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="sTp-2H-GMP" kind="show" id="A2j-rk-hv1"/>
                             </connections>
@@ -621,6 +611,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="bQ5-4Q-bgk" kind="relationship" relationship="viewControllers" id="QK0-ht-3i0"/>
@@ -637,11 +628,11 @@
             <objects>
                 <viewController id="KRr-V8-11W" customClass="signupViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fd8-bh-Itd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uGc-jR-0y1">
-                                <rect key="frame" x="30" y="30" width="354" height="354"/>
+                                <rect key="frame" x="30" y="118" width="354" height="354"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" User name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Chh-iN-aW2">
                                         <rect key="frame" x="10" y="0.0" width="334" height="34"/>
@@ -739,6 +730,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mym-99-o1Y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -761,7 +753,7 @@
         <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Agd-rC-s51"/>
-        <segue reference="o98-A2-ezR"/>
+        <segue reference="GGO-bg-Rq6"/>
+        <segue reference="Li7-tf-iBD"/>
     </inferredMetricsTieBreakers>
 </document>
