@@ -156,23 +156,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-SI-pWC">
-                                <rect key="frame" x="90" y="230" width="256" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Show Nearby Places">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bSm-Hs-hgj" kind="show" destinationCreationSelector="SegueAction:" id="hmk-DQ-JRb"/>
-                                </connections>
-                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-4H-pHw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="5u1-gQ-Ntr"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WcT-4H-pHw" firstAttribute="leading" secondItem="XEI-Vu-O37" secondAttribute="leading" id="00m-4C-c5v"/>
+                            <constraint firstItem="WcT-4H-pHw" firstAttribute="top" secondItem="XEI-Vu-O37" secondAttribute="top" id="2AN-gh-kxB"/>
+                            <constraint firstItem="XEI-Vu-O37" firstAttribute="bottom" secondItem="WcT-4H-pHw" secondAttribute="bottom" id="VGm-YI-ZlE"/>
+                            <constraint firstItem="XEI-Vu-O37" firstAttribute="trailing" secondItem="WcT-4H-pHw" secondAttribute="trailing" id="cAY-vO-QY9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XEI-Vu-O37"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" image="pencil.circle" catalog="system" id="RT1-Ez-2ev"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="WcT-4H-pHw" id="oLw-gT-qgi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQr-kY-kzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

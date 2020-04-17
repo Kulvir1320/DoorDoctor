@@ -170,7 +170,7 @@
 			children = (
 				BD571F8A2448E932000A24A6 /* ViewsSwiftUI */,
 				BD571F892448E90D000A24A6 /* ManagersSwiftUI */,
-				BD571F882448E8E1000A24A6 /* ModelSwiftUI */,
+				BD571F882448E8E1000A24A6 /* Models */,
 				61DF0E6D2445615A00E472BA /* Images */,
 				4280479D2440261500C43156 /* doctor.png */,
 				8C4A4877243E65A600F6B20E /* Helpers */,
@@ -219,13 +219,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BD571F882448E8E1000A24A6 /* ModelSwiftUI */ = {
+		BD571F882448E8E1000A24A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				BD571F8B2448E98D000A24A6 /* Landmark.swift */,
 				BD571F8D2448E9AB000A24A6 /* LandmarkAnnotation.swift */,
 			);
-			path = ModelSwiftUI;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BD571F892448E90D000A24A6 /* ManagersSwiftUI */ = {
