@@ -182,6 +182,19 @@ class BookingViewController: UIViewController {
                 
                         let b = BookingModal(dName: dName!, uName: uName!, Age : uAge, Gender: uGender!, Phone: ph!, uDate: udate!, uTime: utime!)
                 bookingModal?.append(b)
+                        
+                        let center = UNUserNotificationCenter.current()
+                               
+                               let content = UNMutableNotificationContent()
+                               content.title = "DoorDoctor Reminder"
+                               content.body = "you have booked your appointment with \(dNameLabel.text!) at \(timeLabel.text!) on \(dateLabel.text!)"
+                               content.sound = .default
+                               content.badge = 1
+                               let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
+                               let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: tigger)
+                               center.add(request) { (error) in
+                                   print("Erorr =\(error?.localizedDescription ?? "error local notification") " )
+                               }
                 
                               print("--------------------start---------------------")
                 for book in bookingModal! {
@@ -219,6 +232,14 @@ class BookingViewController: UIViewController {
                 loadCoreData()
                 }
                 }
+        
+       
+     func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                    willPresent notification: UNNotification,
+                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            completionHandler([.alert, .sound])
+
+        }
           
     }
     
