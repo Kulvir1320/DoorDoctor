@@ -38,4 +38,6 @@ class userAccount{
         self.phone = phone
         self.Email = Email
     }
+    
+    static var loggedInUser = ""
 }

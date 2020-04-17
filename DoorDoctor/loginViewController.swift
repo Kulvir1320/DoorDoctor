@@ -109,6 +109,7 @@ class loginViewController: UIViewController {
 ////
         else {
 
+            
 //
 //                                                                                        // add
             CheckForUserNameAndPasswordMatch(username: username!, password: password!)
@@ -155,6 +156,7 @@ class loginViewController: UIViewController {
                 if objectentity.username == username && objectentity.password == password
                 {
                     loadHomeScreen()
+                    userAccount.loggedInUser = username
                     let alert = UIAlertController(title: "Welcome \(username)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
                     
                                                                                                  // add an action (button)

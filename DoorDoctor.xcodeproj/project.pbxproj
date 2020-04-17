@@ -44,6 +44,9 @@
 		8C4A4874243D4CC800F6B20E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A4873243D4CC800F6B20E /* signupViewController.swift */; };
 		8C4A487B243E661600F6B20E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A487A243E661600F6B20E /* Utilities.swift */; };
 		8CC8F2742447E23A00A7C037 /* userAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8F2732447E23A00A7C037 /* userAccount.swift */; };
+		8CC8F2762449168000A7C037 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8F2752449168000A7C037 /* infoViewController.swift */; };
+		8CC8F27824491CB200A7C037 /* infoCustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8F27724491CB200A7C037 /* infoCustomCellTableViewCell.swift */; };
+		8CC8F27A2449264D00A7C037 /* AppointmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8F2792449264D00A7C037 /* AppointmentList.swift */; };
 		BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D12444F7B20070DD5A /* hometabViewController.swift */; };
 		BD5070D4244503900070DD5A /* iconAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5070D3244503900070DD5A /* iconAsset.xcassets */; };
 		BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5070D524451A1A0070DD5A /* Designable Text Field.swift */; };
@@ -98,6 +101,9 @@
 		8C4A4873243D4CC800F6B20E /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
 		8C4A487A243E661600F6B20E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8CC8F2732447E23A00A7C037 /* userAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userAccount.swift; sourceTree = "<group>"; };
+		8CC8F2752449168000A7C037 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
+		8CC8F27724491CB200A7C037 /* infoCustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		8CC8F2792449264D00A7C037 /* AppointmentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentList.swift; sourceTree = "<group>"; };
 		BD5070D12444F7B20070DD5A /* hometabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hometabViewController.swift; sourceTree = "<group>"; };
 		BD5070D3244503900070DD5A /* iconAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iconAsset.xcassets; sourceTree = "<group>"; };
 		BD5070D524451A1A0070DD5A /* Designable Text Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Designable Text Field.swift"; sourceTree = "<group>"; };
@@ -193,9 +199,12 @@
 				428047F424479D8400C43156 /* Remedies.swift */,
 				428047F824479F0700C43156 /* VideoData.swift */,
 				428047FA2447AA0E00C43156 /* RemedieTVC.swift */,
+				8CC8F27724491CB200A7C037 /* infoCustomCellTableViewCell.swift */,
 				428047FC2447AC5700C43156 /* PlayVC.swift */,
 				8CC8F2732447E23A00A7C037 /* userAccount.swift */,
 				BD571F842448E2C5000A24A6 /* MapVC.swift */,
+				8CC8F2752449168000A7C037 /* infoViewController.swift */,
+				8CC8F2792449264D00A7C037 /* AppointmentList.swift */,
 			);
 			path = DoorDoctor;
 			sourceTree = "<group>";
@@ -334,8 +343,10 @@
 				428047FB2447AA0E00C43156 /* RemedieTVC.swift in Sources */,
 				BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */,
 				8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */,
+				8CC8F27824491CB200A7C037 /* infoCustomCellTableViewCell.swift in Sources */,
 				428047F924479F0700C43156 /* VideoData.swift in Sources */,
 				BD571F8E2448E9AB000A24A6 /* LandmarkAnnotation.swift in Sources */,
+				8CC8F2762449168000A7C037 /* infoViewController.swift in Sources */,
 				BD571F852448E2C5000A24A6 /* MapVC.swift in Sources */,
 				8C4A4865243D495500F6B20E /* DoorDoctor.xcdatamodeld in Sources */,
 				8C4A485D243D495500F6B20E /* SceneDelegate.swift in Sources */,
@@ -349,6 +360,7 @@
 				BD571F922448E9FE000A24A6 /* MapView.swift in Sources */,
 				428047F724479EB600C43156 /* helperR.swift in Sources */,
 				61DF0E8F24458C1200E472BA /* BookingViewController.swift in Sources */,
+				8CC8F27A2449264D00A7C037 /* AppointmentList.swift in Sources */,
 				61DF0E9124458C4600E472BA /* appointmentBooking.swift in Sources */,
 				BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */,
 				428047F324479AEC00C43156 /* SearchRemedieVC.swift in Sources */,
