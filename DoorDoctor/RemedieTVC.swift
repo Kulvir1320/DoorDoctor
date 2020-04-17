@@ -12,9 +12,21 @@ class RemedieTVC: UITableViewController {
     
     var selectItem = -1
     var rv : YTVideo?
+    var alert : UIAlertController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+
+               let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+               loadingIndicator.hidesWhenStopped = true
+               loadingIndicator.style = UIActivityIndicatorView.Style.medium
+               loadingIndicator.startAnimating();
+
+               alert!.view.addSubview(loadingIndicator)
+               present(alert!, animated: true, completion: nil)
         
         start()
 
@@ -103,7 +115,7 @@ class RemedieTVC: UITableViewController {
             selectItem = tableView.indexPath(for: cell)!.row
         }
         
-        if let play = sender as? PlayVC{
+        if let play = segue.destination as? PlayVC{
             if let item: Item = yt_Videos?.items[selectItem]{
                 play.item = item
             }
@@ -113,8 +125,10 @@ class RemedieTVC: UITableViewController {
     
     
     func start(){
-        let seconds = 1.0
+        let seconds = 5.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds){
+            
+            self.alert?.dismiss(animated: false, completion: nil)
             if let v = yt_Videos{
                 self.rv = v
                 

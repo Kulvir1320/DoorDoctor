@@ -38,11 +38,24 @@ class PlayVC: UIViewController {
     }
     */
     func start(){
-        DispatchQueue.main.async {
-            let request = URLRequest(url: URL(string: PLAY_URL + (self.item?.id.videoID)!)!)
-            
-            self.webView?.load(request)
+//        DispatchQueue.main.async {
+//            let request = URLRequest(url: URL(string: PLAY_URL + (self.item?.id.videoID)!)!)
+//            
+//            self.webView?.load(request)
+//            
+//            
+//        }
+        
+        let seconds = 3.0
+               DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                   print(self.item?.id.videoID ?? "")
+                   let request = URLRequest(url: URL(string: (PLAY_URL + (self.item?.id.videoID)!))!)
+                   print("request player......................",request)
+                   self.webView!.load(request)
+                
         }
+        
+        
     }
 
 }
