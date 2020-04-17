@@ -23,46 +23,19 @@ class loginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        passwordTextField.leftViewMode = .unlessEditing
-//        button.setImage(UIImage(named: "eyeclose"), for: .normal)
-//        button.imageEdgeInsets = UIEdgeInsets(top: 5, left: -24, bottom: 5, right: 15)
-//        button.frame = CGRect(x: CGFloat(passwordTextField.frame.size.width - 25), y: CGFloat(5), width: CGFloat(15), height: CGFloat(25))
-//        button.addTarget(self, action: #selector(self.btnPasswordVisibilityClicked), for: .touchUpInside)
-//        passwordTextField.leftView = button
-//        passwordTextField.rightViewMode = .always
         
-//        let userImage = UIImage(named: "usericon")
-//        addLeftImageTo(textField: usernameTextField, andImage: userImage!)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
+              self.view.addGestureRecognizer(tapGesture)
 //
-//        let passImage = UIImage(named: "showpass")
-//               addLeftImageTo(textField: passwordTextField, andImage: passImage!)
-
         // Do any additional setup after loading the view.
          useraccount = [userAccount]()
          setUpElements()
     }
     
-//    @IBAction func btnPasswordVisibilityClicked(_ sender: Any) {
-//        (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
-//        if (sender as! UIButton).isSelected {
-//            self.passwordTextField.isSecureTextEntry = false
-//            button.setImage(UIImage(named:"openeye.png"), for: .normal)
-//        } else {
-//             self.passwordTextField.isSecureTextEntry = true
-//                       button.setImage(UIImage(named:"eyeclose.png"), for: .normal)
-//        }
-//    }
-    
+//
     
 //    func addLeftImageTo(textField: UITextField, andImage img: UIImage) {
-//
-//        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 20, height: 20))
-//        leftImageView.image = img
-//        textField.leftView = leftImageView
-//        textField.leftViewMode = .always
-//    }
-////
-    
+ 
     
 
     
@@ -78,7 +51,13 @@ class loginViewController: UIViewController {
         Utilities.styleFilledButton(login)
         
     }
-    
+    @objc func viewtapped()
+    {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+      
+    }
+     
     
     
     

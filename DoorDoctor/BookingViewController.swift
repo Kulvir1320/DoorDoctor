@@ -37,6 +37,8 @@ class BookingViewController: UIViewController {
     var selectedIndex = -1
 
     override func viewDidLoad() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
+                     self.view.addGestureRecognizer(tapGesture)
         super.viewDidLoad()
          setUpElements()
         // Do any additional setup after loading the view.
@@ -53,6 +55,17 @@ class BookingViewController: UIViewController {
                datePickerLabel?.minimumDate = Date.calculateData(day: 1, month: 1, year: 2020, hour: 0, minute: 0)
                datePickerLabel?.maximumDate = Date.calculateData(day: 31, month: 1, year: 2021, hour: 0, minute: 0)
         
+    }
+    
+    @objc func viewtapped()
+    {
+        uNameTxtField.resignFirstResponder()
+        uEmailTxtField.resignFirstResponder()
+        uAgeTxtField.resignFirstResponder()
+        uGenderTxtField.resignFirstResponder()
+        dateLabel.resignFirstResponder()
+        timeLabel.resignFirstResponder()
+      
     }
     
    func setUpElements() {

@@ -30,7 +30,18 @@ class signupViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setUpElements()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
+        self.view.addGestureRecognizer(tapGesture)
           useraccount = [userAccount]()
+    }
+    
+    @objc func viewtapped()
+    {
+        UserNameTextField.resignFirstResponder()
+        PasswordTextField.resignFirstResponder()
+        EmailTextField.resignFirstResponder()
+        PhoneNmberTextField.resignFirstResponder()
     }
     func setUpElements() {
       
