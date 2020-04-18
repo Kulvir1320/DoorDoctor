@@ -92,8 +92,14 @@ class signupViewController: UIViewController {
                         }
                         else{
                             self.showAlert(title: "Congratulations", message: "You are succesfully registered")
+                            
+                          
                         }
                     }
+                    
+                    self.transition()
+                    
+                    
                 }
             }
             
@@ -222,6 +228,13 @@ class signupViewController: UIViewController {
         errorlabel.alpha = 1
         errorlabel.text = message
         
+    }
+    
+    func transition()  {
+    let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? ViewController
+
+                       self.view.window?.rootViewController = vc
+                       self.view.window?.makeKeyAndVisible()
     }
     
     

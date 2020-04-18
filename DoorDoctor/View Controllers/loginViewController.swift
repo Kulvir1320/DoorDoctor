@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FirebaseAuth
 
 class loginViewController: UIViewController {
 
@@ -62,54 +63,65 @@ class loginViewController: UIViewController {
     
     
     @IBAction func LoginButton(_ sender: UIButton) {
-         
-      
-        print("login")
-
-//
-        let username = usernameTextField.text
-        let password = passwordTextField.text
-
-//
-//
-//
-//
-        CheckForUserNameAndPasswordMatch(username: username!, password: password!)
-        if(username == "" || password == ""){
-
-            let alert = UIAlertController(title: "OPPs! Something went wrong ", message: "All fields are mandatory for Login", preferredStyle: UIAlertController.Style.alert)
-
-                                                                    // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                    // show the alert
-            self.present(alert, animated: true, completion: nil)
-        }
-////
-        else {
-
-            
-//
-//                                                                                        // add
-            CheckForUserNameAndPasswordMatch(username: username!, password: password!)
-            usernameTextField.text = ""
-            passwordTextField.text = ""
-        }
-    
-    }
-    func loadHomeScreen(){
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "homeviewController") as! hometabViewController
-//        self.present(loggedInViewController, animated: true, completion: nil)
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "homeviewController") as! hometabViewController
-//        navigationController?.pushViewController(vc, animated: true)
-        // Safe Push VC
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeviewController") as? hometabViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(viewController, animated: true)
+        
+        let email = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        
+        Auth.auth().signIn(withEmail: email!, password: password!) { (result, error) in
+            if error != nil{
+                self.showAlert(title: "OOPS!!", message: "Your password or email is incorrect.")
+            }else{
+                self.loadHomeScreen()
             }
         }
+        
+        
+      
+     //   print("login")
+
+      //  let username = usernameTextField.text
+     //   let password = passwordTextField.text
+
+      //  CheckForUserNameAndPasswordMatch(username: username!, password: password!)
+      //  if(username == "" || password == ""){
+
+     //    let alert = UIAlertController(title: "OPPs! Something went wrong ", message: "All fields are mandatory for Login", preferredStyle: UIAlertController.Style.alert)
+
+       //     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+        //    self.present(alert, animated: true, completion: nil)
+      //  }
+     //   else {
+
+      //      CheckForUserNameAndPasswordMatch(username: username!, password: password!)
+      //      usernameTextField.text = ""
+      //      passwordTextField.text = ""
+      //  }
+    
+    }
+    
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    func loadHomeScreen(){
+
+      //  if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeviewController") as? hometabViewController {
+       //     if let navigator = navigationController {
+         //       navigator.pushViewController(viewController, animated: true)
+          //  }
+       // }
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "homeviewController") as? hometabViewController
+
+        self.view.window?.rootViewController = vc
+        self.view.window?.makeKeyAndVisible()
     }
     
     
