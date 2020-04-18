@@ -53,7 +53,7 @@ class signupViewController: UIViewController {
         errorlabel.alpha = 0
       
           // Style the elements
-        Utilities.styleTextField(UserNameTextField)
+    
         Utilities.styleTextField(PasswordTextField)
         Utilities.styleTextField(EmailTextField)
         Utilities.styleTextField(PhoneNmberTextField)
@@ -76,6 +76,7 @@ class signupViewController: UIViewController {
         let error = validateFeilds()
         
         if error != nil{
+            showError(message: error!)
             print("therer is erroe with the feilds////////")
         }else{
             
@@ -88,6 +89,9 @@ class signupViewController: UIViewController {
                     db.collection("users").addDocument(data: ["firstname": fname!,"lastname": lname!, "phone": phone!,"uid": result!.user.uid]) { (error) in
                         if error != nil{
                             print("///////////////////")
+                        }
+                        else{
+                            self.showAlert(title: "Congratulations", message: "You are succesfully registered")
                         }
                     }
                 }
@@ -214,6 +218,12 @@ class signupViewController: UIViewController {
 //        }
      }
     
+    func showError(message: String){
+        errorlabel.alpha = 1
+        errorlabel.text = message
+        
+    }
+    
     
     func validateFeilds() -> String? {
         
@@ -222,9 +232,19 @@ class signupViewController: UIViewController {
             EmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             PasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             PhoneNmberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            return "fill all the feilds"
+            return "Please fill all the required feilds"
         }
         return nil
+    }
+    
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     func clearCoreData() {
            // create an instance of app delegate

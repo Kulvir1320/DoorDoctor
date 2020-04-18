@@ -685,35 +685,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uGc-jR-0y1">
-                                <rect key="frame" x="30" y="118" width="354" height="354"/>
+                                <rect key="frame" x="30" y="118" width="354" height="290"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" User name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Chh-iN-aW2">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVG-Df-nFR">
                                         <rect key="frame" x="10" y="0.0" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JjA-sd-asK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-j2-2w9">
                                         <rect key="frame" x="10" y="64" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVG-Df-nFR">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-He-s5g">
                                         <rect key="frame" x="10" y="128" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-j2-2w9">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JjA-sd-asK">
                                         <rect key="frame" x="10" y="192" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-He-s5g">
-                                        <rect key="frame" x="10" y="256" width="334" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uV-DM-0P7">
-                                        <rect key="frame" x="10" y="320" width="334" height="34"/>
+                                        <rect key="frame" x="10" y="256" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
@@ -723,7 +718,6 @@
                                     <constraint firstItem="8Fu-j2-2w9" firstAttribute="leading" secondItem="uGc-jR-0y1" secondAttribute="leading" constant="10" id="6kJ-ce-H45"/>
                                     <constraint firstItem="sVG-Df-nFR" firstAttribute="leading" secondItem="uGc-jR-0y1" secondAttribute="leading" constant="10" id="6xG-EG-gKt"/>
                                     <constraint firstItem="5uV-DM-0P7" firstAttribute="leading" secondItem="uGc-jR-0y1" secondAttribute="leading" constant="10" id="HUc-gJ-8cP"/>
-                                    <constraint firstItem="Chh-iN-aW2" firstAttribute="leading" secondItem="uGc-jR-0y1" secondAttribute="leading" constant="10" id="n68-jp-lqE"/>
                                     <constraint firstItem="JjA-sd-asK" firstAttribute="leading" secondItem="uGc-jR-0y1" secondAttribute="leading" constant="10" id="ton-SS-Ic9"/>
                                 </constraints>
                             </stackView>
@@ -764,7 +758,6 @@
                         <outlet property="EmailTextField" destination="JZw-He-s5g" id="kJi-Pj-Mm0"/>
                         <outlet property="PasswordTextField" destination="JjA-sd-asK" id="gcY-bL-Jrc"/>
                         <outlet property="PhoneNmberTextField" destination="5uV-DM-0P7" id="Rhg-0r-sSQ"/>
-                        <outlet property="UserNameTextField" destination="Chh-iN-aW2" id="9Nf-ss-DKR"/>
                         <outlet property="errorlabel" destination="Lrr-zR-OCg" id="rTs-wG-IfF"/>
                         <outlet property="firstnametxt" destination="sVG-Df-nFR" id="LWc-DW-MW9"/>
                         <outlet property="lastnametxt" destination="8Fu-j2-2w9" id="oLa-L8-HtN"/>
@@ -807,6 +800,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GGO-bg-Rq6"/>
-        <segue reference="Li7-tf-iBD"/>
+        <segue reference="o98-A2-ezR"/>
     </inferredMetricsTieBreakers>
 </document>
