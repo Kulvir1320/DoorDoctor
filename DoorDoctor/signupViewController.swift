@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
 class signupViewController: UIViewController {
     
@@ -61,166 +64,168 @@ class signupViewController: UIViewController {
 
     
      @IBAction func SignUpButton(_ sender: UIButton) {
-//        clearCoreData()
-        // create an instance of app delegate
-               let appDelegate = UIApplication.shared.delegate as! AppDelegate
-               // second step is context
-            
-        let managedContext = appDelegate.persistentContainer.viewContext
-        print("--------------------start---------------------")
         
-        let username = UserNameTextField.text as! String
-        let password = PasswordTextField.text as! String
-        let Email = EmailTextField.text as! String
-        let Phone = Int(PhoneNmberTextField.text ?? "0" ) ?? 0
         
-        let firstName = firstnametxt.text as! String
-        let lastName = lastnametxt.text as! String
+        let email = EmailTextField.text
+        let password = PasswordTextField.text
+        let fname = firstnametxt.text
+        let lname = lastnametxt.text
+        let phone = PhoneNmberTextField.text
         
-       
-       
-        let u = userAccount(username: username, password: password,firstname: firstName, lastname: lastName, phone: Phone,Email: Email )
-        useraccount?.append(u)
-         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
         
-        var phonePresent = false
-        var unPresent = false
-        if(username == "" || password == "" || firstName == "" || lastName == "" || Email == "" || Phone == nil){
-       
-            
-            let alert = UIAlertController(title: "OPPs! Something went ", message: "All fields are required for Registration", preferredStyle: UIAlertController.Style.alert)
-
-                                                                                  // add an action (button)
-                          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                                  // show the alert
-                          self.present(alert, animated: true, completion: nil)
-        }
-        else {
-         do {
-    
-                let results = try managedContext.fetch(fetchRequest)
-                if results is [NSManagedObject] {
-                for result in results as! [NSManagedObject] {
+        let error = validateFeilds()
         
-                un = result.value(forKey: "username") as! String
-                phn = result.value(forKey: "phone") as! Int
-        
-                                print("un\(un)")
-                                print("phn\(phn)")
-     
-                                
-                if(Int(PhoneNmberTextField.text!) == phn){
-                                    
-                                    phonePresent = true
-                                    
-                                }
-            if(UserNameTextField.text! == un){
-                                    
-                                    unPresent = true
-                                    
-                                    }
-                                
-                                
-                        }
-            }
-         }
-         catch {
-                print(error)
-                }
-        
-                                
-        print(phonePresent)
-        print(unPresent)
-        if ((phonePresent) || (unPresent)){
-            
-            let alert = UIAlertController(title: "OPPS! something went ", message: "Sorry you are already registered.", preferredStyle: UIAlertController.Style.alert)
-
-                                                                        // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                        // show the alert
-                self.present(alert, animated: true, completion: nil)
-            
-            
-            
+        if error != nil{
+            print("therer is erroe with the feilds////////")
         }else{
             
-            do {
-                for user in useraccount!{
-                let userEntity = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: managedContext)
-                    userEntity.setValue(user.Email, forKey: "email")
-                       userEntity.setValue(user.firstname, forKey: "firstname")
-                    userEntity.setValue(user.lastname, forKey: "lastname")
-                    userEntity.setValue(user.password, forKey: "password")
-                    userEntity.setValue(user.phone, forKey: "phone")
-                    userEntity.setValue(user.username, forKey: "username")
-                       
-                      
-                       print("-----------------------------end---------------")
-                
-                try   managedContext.save()
-
-                        let alert = UIAlertController(title: "Congratulations", message: " You are now member of DoorDoctor", preferredStyle: UIAlertController.Style.alert)
-
-                                                                  // add an action (button)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                  // show the alert
-                    self.present(alert, animated: true, completion: nil)
-                     UserNameTextField.text = ""
-                     PasswordTextField.text = ""
-                     EmailTextField.text = ""
-                     PhoneNmberTextField.text = ""
-                     firstnametxt.text = ""
-                     lastnametxt.text = ""
-                    print("Data is Saved")
-                    
+            Auth.auth().createUser(withEmail: email!, password: password!) { (result, err) in
+                if err != nil{
+                    print(err?.localizedDescription)
+                    print("there is error while create user.//////////")
+                }else{
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["firstname": fname!,"lastname": lname!, "phone": phone!,"uid": result!.user.uid]) { (error) in
+                        if error != nil{
+                            print("///////////////////")
+                        }
+                    }
                 }
-                
             }
-            catch {
-                print(error)
-              print("error")
-            }
-//            }
-        }
             
-        // reading database
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
-//
-               do {
-
-                    print("---Data inside the database ---")
-                var count = 0
-                   let results = try managedContext.fetch(fetchRequest)
-                   if results is [NSManagedObject] {
-                       for result in results as! [NSManagedObject] {
-
-                        print("row---\(count)\n")
-                        let un = result.value(forKey: "username") as! String
-                        let email = result.value(forKey: "email") as! String
-                        let fn = result.value( forKey: "firstname") as! String
-                         let ln = result.value( forKey: "lastname") as! String
-                       let pw = result.value( forKey: "password") as! String
-                        let ph = result.value(forKey: "phone") as! Int
-
-                        print("\(un)--\(email)--\(pw)--\(fn)--\(ln)--\(ph)")
-
-
-
-                        print("end of row------\n")
-                        count = count + 1
-
-                       }
-                   }
-               } catch {
-                   print(error)
-               }
-
-        
         }
+
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//        print("--------------------start---------------------")
+        
+//        let username = UserNameTextField.text as! String
+//        let password = PasswordTextField.text as! String
+//        let Email = EmailTextField.text as! String
+//        let Phone = Int(PhoneNmberTextField.text ?? "0" ) ?? 0
+//
+//        let firstName = firstnametxt.text as! String
+//        let lastName = lastnametxt.text as! String
+       
+//        let u = userAccount(username: username, password: password,firstname: firstName, lastname: lastName, phone: Phone,Email: Email )
+//        useraccount?.append(u)
+//         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+//
+//        var phonePresent = false
+//        var unPresent = false
+//        if(username == "" || password == "" || firstName == "" || lastName == "" || Email == "" || Phone == nil){
+//
+//            let alert = UIAlertController(title: "OPPs! Something went ", message: "All fields are required for Registration", preferredStyle: UIAlertController.Style.alert)
+//
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//
+//                          self.present(alert, animated: true, completion: nil)
+//        }else {
+//                do {
+//
+//                let results = try managedContext.fetch(fetchRequest)
+//                if results is [NSManagedObject] {
+//                for result in results as! [NSManagedObject] {
+//
+//                un = result.value(forKey: "username") as! String
+//                phn = result.value(forKey: "phone") as! Int
+//
+//                print("un\(un)")
+//                print("phn\(phn)")
+//
+//                if(Int(PhoneNmberTextField.text!) == phn){
+//                                                phonePresent = true
+//                                }
+//                if(UserNameTextField.text! == un){
+//                                    unPresent = true
+//                            }
+//                        }
+//            }
+//         }
+//         catch {
+//                print(error)
+//                }
+//
+//        if ((phonePresent) || (unPresent)){
+//
+//            let alert = UIAlertController(title: "OPPS! something went ", message: "Sorry you are already registered.", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//        }else{
+//
+//            do {
+//                for user in useraccount!{
+//                let userEntity = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: managedContext)
+//                    userEntity.setValue(user.Email, forKey: "email")
+//                       userEntity.setValue(user.firstname, forKey: "firstname")
+//                    userEntity.setValue(user.lastname, forKey: "lastname")
+//                    userEntity.setValue(user.password, forKey: "password")
+//                    userEntity.setValue(user.phone, forKey: "phone")
+//                    userEntity.setValue(user.username, forKey: "username")
+//
+//                try   managedContext.save()
+//
+//                        let alert = UIAlertController(title: "Congratulations", message: " You are now member of DoorDoctor", preferredStyle: UIAlertController.Style.alert)
+//
+//                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//
+//                    self.present(alert, animated: true, completion: nil)
+//                     UserNameTextField.text = ""
+//                     PasswordTextField.text = ""
+//                     EmailTextField.text = ""
+//                     PhoneNmberTextField.text = ""
+//                     firstnametxt.text = ""
+//                     lastnametxt.text = ""
+//                    print("Data is Saved")
+//
+//                }
+//
+//            }
+//            catch {
+//                print(error)
+//              print("error")
+//            }
+//        }
+//               do {
+//
+//                    print("---Data inside the database ---")
+//                var count = 0
+//                   let results = try managedContext.fetch(fetchRequest)
+//                   if results is [NSManagedObject] {
+//                       for result in results as! [NSManagedObject] {
+//
+//                        print("row---\(count)\n")
+//                        let un = result.value(forKey: "username") as! String
+//                        let email = result.value(forKey: "email") as! String
+//                        let fn = result.value( forKey: "firstname") as! String
+//                         let ln = result.value( forKey: "lastname") as! String
+//                       let pw = result.value( forKey: "password") as! String
+//                        let ph = result.value(forKey: "phone") as! Int
+//
+//                        count = count + 1
+//
+//                       }
+//                   }
+//               } catch {
+//                   print(error)
+//               }
+//
+//        }
      }
+    
+    
+    func validateFeilds() -> String? {
+        
+        if firstnametxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            lastnametxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            EmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            PasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            PhoneNmberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return "fill all the feilds"
+        }
+        return nil
+    }
     func clearCoreData() {
            // create an instance of app delegate
            let appDelegate = UIApplication.shared.delegate as! AppDelegate
