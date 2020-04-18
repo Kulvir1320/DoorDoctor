@@ -57,6 +57,7 @@
 		BD571F902448E9DD000A24A6 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F8F2448E9DD000A24A6 /* LocalManager.swift */; };
 		BD571F922448E9FE000A24A6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F912448E9FE000A24A6 /* MapView.swift */; };
 		BD571F962448F6DB000A24A6 /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD571F952448F6DB000A24A6 /* PlacesListView.swift */; };
+		BD57200E244A996C000A24A6 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD57200D244A996C000A24A6 /* CardCell.swift */; };
 		BDD74BE1243FE4DF00239FAD /* Cowboy - 33318.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */; };
 		BDD74BE3243FEA8200239FAD /* Doctor - 29643.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */; };
 /* End PBXBuildFile section */
@@ -114,6 +115,7 @@
 		BD571F8F2448E9DD000A24A6 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
 		BD571F912448E9FE000A24A6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BD571F952448F6DB000A24A6 /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
+		BD57200D244A996C000A24A6 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		BDD74BE0243FE4DF00239FAD /* Cowboy - 33318.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cowboy - 33318.mp4"; sourceTree = "<group>"; };
 		BDD74BE2243FEA8200239FAD /* Doctor - 29643.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Doctor - 29643.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +217,7 @@
 				8C4A487A243E661600F6B20E /* Utilities.swift */,
 				428047F624479EB600C43156 /* helperR.swift */,
 				BD571F862448E492000A24A6 /* ContentView.swift */,
+				BD57200D244A996C000A24A6 /* CardCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				61DF0E8F24458C1200E472BA /* BookingViewController.swift in Sources */,
 				8CC8F27A2449264D00A7C037 /* AppointmentList.swift in Sources */,
 				61DF0E9124458C4600E472BA /* appointmentBooking.swift in Sources */,
+				BD57200E244A996C000A24A6 /* CardCell.swift in Sources */,
 				BD5070D22444F7B20070DD5A /* hometabViewController.swift in Sources */,
 				428047F324479AEC00C43156 /* SearchRemedieVC.swift in Sources */,
 				8C4A4872243D4CB600F6B20E /* loginViewController.swift in Sources */,

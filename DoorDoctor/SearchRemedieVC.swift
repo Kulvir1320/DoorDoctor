@@ -8,12 +8,21 @@
 
 import UIKit
 
-class SearchRemedieVC: UIViewController {
+class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     @IBOutlet weak var searchRemd: UISearchBar!
     
     @IBOutlet weak var sButtonLbl: UIButton!
+    
+    @IBOutlet var cardTableView: UITableView!
+    
+    let pictures: [UIImage] = [UIImage(named: "fever.jpg")!, UIImage(named: "headache.jpeg")! , UIImage(named: "CoughCold.png")!,UIImage(named: "Stomachache.jpg")!]
+    let titles: [String] = ["Fever","Headache", "ColdCough", "Stomachache"]
+    let descriptions: [String] = ["Fever is when a human's body temperature goes above the normal range of 36–37° Centigrade.","Headache is pain in any region of the head.This may occur on one or both sides of the head.", "ColdCough is a self-limited contagious disease that can be caused by different types of viruses.","A stomach ache is refer to cramps or a dull ache in the tummy .It's usually short-lived."]
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +31,24 @@ class SearchRemedieVC: UIViewController {
         
         Utilities.styleFilledButton(sButtonLbl)
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pictures.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
+        
+        cell.configure(picture: pictures[indexPath.row], title: titles[indexPath.row], description: descriptions[indexPath.row])
+        
+        
+        
+        return cell
+    }
+    
+    
     
 
     /*
