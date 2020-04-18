@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -149,6 +149,7 @@
 		61DF0E6D2445615A00E472BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4280479D2440261500C43156 /* doctor.png */,
 				61DF0E78244567B700E472BA /* Dr Aiden.jpg */,
 				61DF0E70244567B600E472BA /* Dr Sofia.jpg */,
 				61DF0E79244567B700E472BA /* Dr Emily.jpg */,
@@ -191,7 +192,6 @@
 				BD571F892448E90D000A24A6 /* ManagersSwiftUI */,
 				BD571F882448E8E1000A24A6 /* Models */,
 				61DF0E6D2445615A00E472BA /* Images */,
-				4280479D2440261500C43156 /* doctor.png */,
 				8C4A4877243E65A600F6B20E /* Helpers */,
 				8C4A485A243D495500F6B20E /* AppDelegate.swift */,
 				8C4A485C243D495500F6B20E /* SceneDelegate.swift */,
@@ -272,7 +272,6 @@
 				545B0E2E564EB135AD6941B3 /* Pods-DoorDoctor.debug.xcconfig */,
 				4682EF4FB9EA5C48775E61E0 /* Pods-DoorDoctor.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
