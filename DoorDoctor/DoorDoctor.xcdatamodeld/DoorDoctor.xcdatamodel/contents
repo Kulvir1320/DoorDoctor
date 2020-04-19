@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Appointments" representedClassName="Appointments" syncable="YES" codeGenerationType="class">
         <attribute name="dName" optional="YES" attributeType="String"/>
         <attribute name="uAge" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -22,11 +22,10 @@
         <attribute name="lastname" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Appointments" positionX="-54" positionY="36" width="128" height="148"/>
         <element name="Doctors" positionX="-36" positionY="45" width="128" height="118"/>
-        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

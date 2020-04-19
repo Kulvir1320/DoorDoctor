@@ -73,6 +73,7 @@ class loginViewController: UIViewController {
                 self.showAlert(title: "OOPS!!", message: "Your password or email is incorrect.")
             }else{
                 self.loadHomeScreen()
+            
             }
         }
         
@@ -144,33 +145,33 @@ class loginViewController: UIViewController {
             {
                 let objectentity = result.firstObject as! UserInfo
 
-                if objectentity.username == username && objectentity.password == password
-                {
-                    loadHomeScreen()
-                    userAccount.loggedInUser = username
-                    let alert = UIAlertController(title: "Welcome \(username)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
-                    
-                                                                                                 // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    
-                                                                                                 // show the alert
-                    self.present(alert, animated: true, completion: nil)
-                    
-                                                      print("You are login Successfully")
-                }
-                else
-                {
-                    
-        let alert = UIAlertController(title: "OPPS! Something went wrong", message: "Username or Password is not Registered", preferredStyle: UIAlertController.Style.alert)
-                    //
-                                                                                                            // add an action (button)
-    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    
-                                                                                                            // show the alert
-                self.present(alert, animated: true, completion: nil)
-                    //                                  print("Please check your fields")
-                    print("Wrong username or password !!!---")
-                }
+//                if objectentity.username == username && objectentity.password == password
+//                {
+//                    loadHomeScreen()
+//                    userAccount.loggedInUser = username
+//                    let alert = UIAlertController(title: "Welcome \(username)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
+//                    
+//                                                                                                 // add an action (button)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                    
+//                                                                                                 // show the alert
+//                    self.present(alert, animated: true, completion: nil)
+//                    
+//                                                      print("You are login Successfully")
+//                }
+//                else
+//                {
+//
+//        let alert = UIAlertController(title: "OPPS! Something went wrong", message: "Username or Password is not Registered", preferredStyle: UIAlertController.Style.alert)
+//                    //
+//                                                                                                            // add an action (button)
+//    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//
+//                                                                                                            // show the alert
+//                self.present(alert, animated: true, completion: nil)
+//                    //                                  print("Please check your fields")
+//                    print("Wrong username or password !!!---")
+//                }
             }
         }
 

@@ -23,15 +23,15 @@ import Foundation
 //
 //static var doctor = [Doctor]()
 class userAccount{
-    var username: String
+
     var password: String
     var firstname: String
     var lastname: String
     var phone: Int
     var Email: String
-    init(username: String, password: String,firstname: String, lastname: String, phone: Int,Email: String )
+    init(password: String,firstname: String, lastname: String, phone: Int,Email: String )
     {
-        self.username = username
+    
         self.password = password
         self.firstname = firstname
         self.lastname = lastname
