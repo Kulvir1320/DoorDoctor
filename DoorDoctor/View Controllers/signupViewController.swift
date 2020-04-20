@@ -178,7 +178,9 @@ class signupViewController: UIViewController {
     
     func saveCoreData(email: String, password: String, firstname: String, lastname: String,phone: Int) {
         
-//        clearCoreData()
+        print("inside save core data.....................")
+        
+        clearCoreData()
         
          let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
