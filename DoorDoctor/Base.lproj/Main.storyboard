@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -156,19 +156,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-4H-pHw">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-4H-pHw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="5u1-gQ-Ntr"/>
-                                </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIj-sD-DAf" userLabel="Zoomminus">
+                                <rect key="frame" x="20" y="692" width="20" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="minus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="ZoomOut:" destination="bF5-ue-ngl" eventType="touchUpInside" id="bdg-K9-oNo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZT-RR-P9E" userLabel="Zoomplus">
+                                <rect key="frame" x="20" y="753" width="20" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="ZoomIn:" destination="bF5-ue-ngl" eventType="touchUpInside" id="MgK-8G-IC8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WcT-4H-pHw" firstAttribute="leading" secondItem="XEI-Vu-O37" secondAttribute="leading" id="00m-4C-c5v"/>
-                            <constraint firstItem="WcT-4H-pHw" firstAttribute="top" secondItem="XEI-Vu-O37" secondAttribute="top" id="2AN-gh-kxB"/>
-                            <constraint firstItem="XEI-Vu-O37" firstAttribute="bottom" secondItem="WcT-4H-pHw" secondAttribute="bottom" id="VGm-YI-ZlE"/>
-                            <constraint firstItem="XEI-Vu-O37" firstAttribute="trailing" secondItem="WcT-4H-pHw" secondAttribute="trailing" id="cAY-vO-QY9"/>
+                            <constraint firstItem="WcT-4H-pHw" firstAttribute="leading" secondItem="XEI-Vu-O37" secondAttribute="leading" id="4S9-yC-TOh"/>
+                            <constraint firstItem="WcT-4H-pHw" firstAttribute="bottom" secondItem="XEI-Vu-O37" secondAttribute="bottom" id="6C0-g7-MjO"/>
+                            <constraint firstItem="WcT-4H-pHw" firstAttribute="trailing" secondItem="XEI-Vu-O37" secondAttribute="trailing" id="7R0-Lb-Xhi"/>
+                            <constraint firstItem="XEI-Vu-O37" firstAttribute="bottom" secondItem="FZT-RR-P9E" secondAttribute="bottom" constant="20" id="Jsf-Sb-8OO"/>
+                            <constraint firstItem="gIj-sD-DAf" firstAttribute="leading" secondItem="XEI-Vu-O37" secondAttribute="leading" constant="20" id="RlK-6Q-ryL"/>
+                            <constraint firstItem="WcT-4H-pHw" firstAttribute="top" secondItem="XEI-Vu-O37" secondAttribute="top" id="eQN-YE-Z4M"/>
+                            <constraint firstItem="FZT-RR-P9E" firstAttribute="leading" secondItem="XEI-Vu-O37" secondAttribute="leading" constant="20" id="hr5-8M-DPn"/>
+                            <constraint firstItem="FZT-RR-P9E" firstAttribute="top" secondItem="gIj-sD-DAf" secondAttribute="bottom" constant="20" id="iSM-hS-bk4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XEI-Vu-O37"/>
                     </view>
@@ -179,6 +198,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="ixF-3v-Z04">
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="UserProfile:" destination="bF5-ue-ngl" id="URQ-xq-cte"/>
                             </connections>
@@ -864,18 +884,20 @@
             <point key="canvasLocation" x="6458" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BacImg4.jpg" width="292" height="404"/>
+        <image name="eye" catalog="system" width="64" height="40"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="minus.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
+        <image name="pencil.circle" catalog="system" width="64" height="60"/>
+        <image name="person.crop.square" catalog="system" width="64" height="56"/>
+        <image name="person.crop.square.fill" catalog="system" width="64" height="56"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Agd-rC-s51"/>
         <segue reference="Li7-tf-iBD"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <image name="BacImg4.jpg" width="292" height="404"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="81"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="person.crop.square" catalog="system" width="128" height="114"/>
-        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-    </resources>
 </document>

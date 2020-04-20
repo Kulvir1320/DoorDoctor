@@ -39,6 +39,7 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showDirection))
         
         mapView.addGestureRecognizer(tapGesture)
+        getNearbyLandmark()
         
 }
     
@@ -115,6 +116,12 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
          let userLocation: CLLocation = locations[0]
+        
+        let allOverlays = mapView.overlays
+        if allOverlays.count > 0 {
+            mapView.removeOverlays(allOverlays)
+            
+        }
                
                let lat = userLocation.coordinate.latitude
                let long = userLocation.coordinate.longitude
@@ -136,6 +143,7 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
                    
                    print("inside for.................")
                    print(lmark.coordinate)
+                print(lmark.name)
                    let annotaion = MKPointAnnotation()
                    print(lmark.coordinate)
                    annotaion.coordinate = lmark.coordinate
@@ -190,4 +198,24 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
                              self.view.window?.makeKeyAndVisible()
 
     }
+    
+    
+    @IBAction func ZoomIn(_ sender: Any) {
+        
+        var zoomRegion = mapView.region
+        zoomRegion.span.latitudeDelta = zoomRegion.span.latitudeDelta/2
+        zoomRegion.span.longitudeDelta = zoomRegion.span.longitudeDelta/2
+        mapView.setRegion(zoomRegion, animated: true)
+    }
+    
+    @IBAction func ZoomOut(_ sender: Any) {
+        
+        var zoomRegion = mapView.region
+        zoomRegion.span.latitudeDelta = zoomRegion.span.latitudeDelta*2
+        zoomRegion.span.longitudeDelta = zoomRegion.span.longitudeDelta*2
+        mapView.setRegion(zoomRegion, animated: true)
+    }
+    
+    
+    
 }
