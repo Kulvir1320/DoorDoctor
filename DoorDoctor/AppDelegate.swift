@@ -14,7 +14,7 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+  var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -27,8 +27,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    }
                }
 //         Override point for customization after application launch.
+        check()
         return true
     }
+    func check() {
+          if UserDefaults.standard.value(forKey: "email") != nil{
+              let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "homeviewController")
+              let navVC = UINavigationController(rootViewController: vc)
+              let share = UIApplication.shared.delegate as? AppDelegate
+              share?.window?.rootViewController = navVC
+              share?.window?.makeKeyAndVisible()
+          }
+      }
 
     // MARK: UISceneSession Lifecycle
 

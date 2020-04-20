@@ -88,4 +88,12 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
                    }
     }
 }
+    @IBAction func LogOut(_ sender: UIBarButtonItem) {
+     UserDefaults.standard.removeObject(forKey: "email")
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginViewController") as? loginViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
+    }
 }

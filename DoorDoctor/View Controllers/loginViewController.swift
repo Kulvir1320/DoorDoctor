@@ -62,7 +62,9 @@ class loginViewController: UIViewController {
       
     }
      
-    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(), style: .plain, target: self, action: nil)
+    }
     
     
     @IBAction func LoginButton(_ sender: UIButton) {
@@ -127,7 +129,7 @@ class loginViewController: UIViewController {
         self.view.window?.rootViewController = vc
         self.view.window?.makeKeyAndVisible()
     }
-    
+
     
     func CheckForUserNameAndPasswordMatch( username: String, password : String)
     {

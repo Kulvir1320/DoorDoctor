@@ -173,6 +173,11 @@
                         <viewLayoutGuide key="safeArea" id="XEI-Vu-O37"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mch-j5-7F9">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="sE1-sJ-0LQ">
+                            <connections>
+                                <action selector="LogOut:" destination="bF5-ue-ngl" id="HXk-CD-ADc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="ixF-3v-Z04">
                             <connections>
                                 <action selector="UserProfile:" destination="bF5-ue-ngl" id="URQ-xq-cte"/>
@@ -375,6 +380,11 @@
                         <viewLayoutGuide key="safeArea" id="8oh-oW-Fry"/>
                     </view>
                     <navigationItem key="navigationItem" id="ElY-qO-3oo">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="Zoi-nZ-Tp3">
+                            <connections>
+                                <action selector="LogOut:" destination="bQ5-4Q-bgk" id="ibw-Dg-cld"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="GkX-eL-a1H">
                             <connections>
                                 <action selector="userProfile:" destination="bQ5-4Q-bgk" id="YKb-G9-4CJ"/>
@@ -503,6 +513,11 @@
                         <viewLayoutGuide key="safeArea" id="afi-tT-dxm"/>
                     </view>
                     <navigationItem key="navigationItem" id="das-10-6nk">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="s37-GB-Pi9">
+                            <connections>
+                                <action selector="LogOut:" destination="APa-TH-noV" id="34z-bo-UqM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="Iln-ju-Vtv">
                             <connections>
                                 <action selector="userProfile:" destination="APa-TH-noV" id="o68-kL-hE5"/>

@@ -37,6 +37,10 @@ class signupViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
         self.view.addGestureRecognizer(tapGesture)
           useraccount = [userAccount]()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(), style: .plain, target: self, action: nil)
     }
     
     @objc func viewtapped()
