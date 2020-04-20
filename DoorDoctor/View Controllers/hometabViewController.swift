@@ -12,11 +12,19 @@ class hometabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+//        let controllers = [SearchRemedieVC.self,MapVC.self,doctorListViewController.self]
+//        tabBarController?.viewControllers = controllers
+//
+//        // Do any additional setup after loading the view.
+//        tabBarController!.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
+        
+//         self.navigationController?.setNavigationBarHidden(false, animated:nil)
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     /*
     // MARK: - Navigation
 

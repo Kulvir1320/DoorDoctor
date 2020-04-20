@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="1879.7101449275365" y="343.52678571428572"/>
         </scene>
-        <!--Item 2-->
+        <!--MapVC-->
         <scene sceneID="hXg-1I-ehr">
             <objects>
                 <viewController id="bF5-ue-ngl" customClass="MapVC" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-4H-pHw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="5u1-gQ-Ntr"/>
                                 </constraints>
@@ -172,22 +172,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XEI-Vu-O37"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="pencil.circle" catalog="system" id="RT1-Ez-2ev"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="Mch-j5-7F9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="ixF-3v-Z04"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="WcT-4H-pHw" id="oLw-gT-qgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQr-kY-kzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3576.811594202899" y="431.91964285714283"/>
+            <point key="canvasLocation" x="4486.9565217391309" y="431.91964285714283"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="YAZ-zu-Ph2">
             <objects>
                 <viewController id="sTp-2H-GMP" customClass="infoViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="inK-Sm-0t6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJt-D6-CnA">
@@ -282,7 +283,7 @@
             </objects>
             <point key="canvasLocation" x="2865.217391304348" y="-917.41071428571422"/>
         </scene>
-        <!--Search-->
+        <!--Search RemedieVC-->
         <scene sceneID="gQe-NG-KZ3">
             <objects>
                 <viewController id="bQ5-4Q-bgk" customClass="SearchRemedieVC" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
@@ -291,7 +292,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wq6-4B-MWW">
-                                <rect key="frame" x="10" y="115" width="394" height="50"/>
+                                <rect key="frame" x="10" y="159" width="394" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7LR-ZK-zQ8"/>
                                 </constraints>
@@ -302,7 +303,7 @@
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="search remedies" translatesAutoresizingMaskIntoConstraints="NO" id="Sp8-Mk-pp2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-6Z-6BY">
@@ -369,8 +370,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8oh-oW-Fry"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="JWb-EX-YPs"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="ElY-qO-3oo">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="GkX-eL-a1H"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardTableView" destination="zhL-6Z-6BY" id="pen-Ig-3gK"/>
                         <outlet property="sButtonLbl" destination="wq6-4B-MWW" id="KRp-mY-ljj"/>
@@ -379,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S88-Ts-gCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3515.9420289855075" y="-454.01785714285711"/>
+            <point key="canvasLocation" x="4426.0869565217399" y="-454.01785714285711"/>
         </scene>
         <!--RemedieTVC-->
         <scene sceneID="Kxe-yj-Uan">
@@ -412,7 +414,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHh-cI-LTN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4439" y="-796"/>
+            <point key="canvasLocation" x="5347.826086956522" y="-796.20535714285711"/>
         </scene>
         <!--PlayVC-->
         <scene sceneID="nQP-dC-58l">
@@ -429,9 +431,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAl-qo-K0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5436" y="-800"/>
+            <point key="canvasLocation" x="6344.9275362318849" y="-800.22321428571422"/>
         </scene>
-        <!--Item-->
+        <!--Doctor List View Controller-->
         <scene sceneID="Sfe-Cc-BnB">
             <objects>
                 <viewController id="APa-TH-noV" customClass="doctorListViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
@@ -492,15 +494,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="afi-tT-dxm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="pencil.and.ellipsis.rectangle" catalog="system" selectedImage="pencil.and.ellipsis.rectangle" id="Jix-TE-h4d"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="das-10-6nk">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="Iln-ju-Vtv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Zx3-Ok-GDl" id="AP7-m0-g3f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQl-bu-ZAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4447.826086956522" y="20.758928571428569"/>
+            <point key="canvasLocation" x="7178.2608695652179" y="20.758928571428569"/>
         </scene>
         <!--Booking View Controller-->
         <scene sceneID="Auv-y8-F2Y">
@@ -645,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bu9-4d-KpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5415.9420289855079" y="-25.446428571428569"/>
+            <point key="canvasLocation" x="8146.3768115942039" y="-25.446428571428569"/>
         </scene>
         <!--Hometab View Controller-->
         <scene sceneID="7zA-9w-gHU">
@@ -654,9 +657,6 @@
                     <navigationItem key="navigationItem" id="6L7-rz-yut">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="0JC-Wl-Eds" userLabel="user">
                             <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="sTp-2H-GMP" kind="show" id="A2j-rk-hv1"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -667,14 +667,14 @@
                         <color key="selectedImageTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="bQ5-4Q-bgk" kind="relationship" relationship="viewControllers" id="QK0-ht-3i0"/>
-                        <segue destination="bF5-ue-ngl" kind="relationship" relationship="viewControllers" id="Qjt-gh-o5X"/>
-                        <segue destination="APa-TH-noV" kind="relationship" relationship="viewControllers" id="g6t-Pl-jaP"/>
+                        <segue destination="8Zi-yr-Guu" kind="relationship" relationship="viewControllers" id="QK0-ht-3i0"/>
+                        <segue destination="yRw-HM-lBf" kind="relationship" relationship="viewControllers" id="Qjt-gh-o5X"/>
+                        <segue destination="OH6-KE-SRZ" kind="relationship" relationship="viewControllers" id="g6t-Pl-jaP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQC-fd-HsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2650" y="-1"/>
+            <point key="canvasLocation" x="2806" y="21"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="QEE-mF-WAM">
@@ -787,19 +787,76 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
+        <!--Search-->
+        <scene sceneID="oLi-gW-YHt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Zi-yr-Guu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="JWb-EX-YPs"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dPR-ji-NcN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bQ5-4Q-bgk" kind="relationship" relationship="rootViewController" id="THV-d5-who"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGE-wH-oZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3515.9420289855075" y="-454.01785714285711"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="yEK-Ja-IUP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yRw-HM-lBf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" image="pencil.circle" catalog="system" id="RT1-Ez-2ev"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CaP-pQ-MCF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bF5-ue-ngl" kind="relationship" relationship="rootViewController" id="hSc-Zc-xIE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cO0-c6-r8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3576.811594202899" y="431.91964285714283"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="wRA-ka-4gs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OH6-KE-SRZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="pencil.and.ellipsis.rectangle" catalog="system" selectedImage="pencil.and.ellipsis.rectangle" id="Jix-TE-h4d"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bwa-5Z-oGR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="APa-TH-noV" kind="relationship" relationship="rootViewController" id="R1a-Tm-KOS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0c7-y6-4e3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6268.115942028986" y="20.758928571428569"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="BacImg4.jpg" width="292" height="404"/>
-        <image name="eye" catalog="system" width="64" height="40"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
-        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
-        <image name="pencil.circle" catalog="system" width="64" height="60"/>
-        <image name="person.crop.square" catalog="system" width="64" height="56"/>
-        <image name="person.crop.square.fill" catalog="system" width="64" height="56"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Agd-rC-s51"/>
         <segue reference="Li7-tf-iBD"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="BacImg4.jpg" width="292" height="404"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="81"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
 </document>
