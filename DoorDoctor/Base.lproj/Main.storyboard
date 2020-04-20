@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipA-Ma-hha">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -837,7 +837,7 @@
         <scene sceneID="oLi-gW-YHt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Zi-yr-Guu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="JWb-EX-YPs"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass.circle.fill" catalog="system" id="JWb-EX-YPs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dPR-ji-NcN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -852,11 +852,11 @@
             </objects>
             <point key="canvasLocation" x="3515.9420289855075" y="-454.01785714285711"/>
         </scene>
-        <!--Item 2-->
+        <!--Clinics-->
         <scene sceneID="yEK-Ja-IUP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yRw-HM-lBf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" image="pencil.circle" catalog="system" id="RT1-Ez-2ev"/>
+                    <tabBarItem key="tabBarItem" title="Clinics" image="location.fill" catalog="system" id="RT1-Ez-2ev"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CaP-pQ-MCF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -871,11 +871,11 @@
             </objects>
             <point key="canvasLocation" x="3576.811594202899" y="431.91964285714283"/>
         </scene>
-        <!--Item-->
+        <!--Doctors-->
         <scene sceneID="wRA-ka-4gs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OH6-KE-SRZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="pencil.and.ellipsis.rectangle" catalog="system" selectedImage="pencil.and.ellipsis.rectangle" id="Jix-TE-h4d"/>
+                    <tabBarItem key="tabBarItem" title="Doctors" image="list.number.rtl" catalog="system" id="Jix-TE-h4d"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bwa-5Z-oGR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -894,10 +894,10 @@
     <resources>
         <image name="BacImg4.jpg" width="292" height="404"/>
         <image name="eye" catalog="system" width="64" height="40"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="list.number.rtl" catalog="system" width="64" height="48"/>
+        <image name="location.fill" catalog="system" width="64" height="56"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="64" height="60"/>
         <image name="minus.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
-        <image name="pencil.circle" catalog="system" width="64" height="60"/>
         <image name="person.crop.square" catalog="system" width="64" height="56"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
