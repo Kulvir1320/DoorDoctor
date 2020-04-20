@@ -173,7 +173,11 @@
                         <viewLayoutGuide key="safeArea" id="XEI-Vu-O37"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mch-j5-7F9">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="ixF-3v-Z04"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="ixF-3v-Z04">
+                            <connections>
+                                <action selector="UserProfile:" destination="bF5-ue-ngl" id="URQ-xq-cte"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="WcT-4H-pHw" id="oLw-gT-qgi"/>
@@ -186,7 +190,7 @@
         <!--Info View Controller-->
         <scene sceneID="YAZ-zu-Ph2">
             <objects>
-                <viewController id="sTp-2H-GMP" customClass="infoViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="doctorListViewController" id="sTp-2H-GMP" customClass="infoViewController" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="inK-Sm-0t6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muH-ic-eER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2865.217391304348" y="-917.41071428571422"/>
+            <point key="canvasLocation" x="5423" y="351"/>
         </scene>
         <!--Search RemedieVC-->
         <scene sceneID="gQe-NG-KZ3">
@@ -371,7 +375,11 @@
                         <viewLayoutGuide key="safeArea" id="8oh-oW-Fry"/>
                     </view>
                     <navigationItem key="navigationItem" id="ElY-qO-3oo">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="GkX-eL-a1H"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="GkX-eL-a1H">
+                            <connections>
+                                <action selector="userProfile:" destination="bQ5-4Q-bgk" id="YKb-G9-4CJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cardTableView" destination="zhL-6Z-6BY" id="pen-Ig-3gK"/>
@@ -495,7 +503,11 @@
                         <viewLayoutGuide key="safeArea" id="afi-tT-dxm"/>
                     </view>
                     <navigationItem key="navigationItem" id="das-10-6nk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="Iln-ju-Vtv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="Iln-ju-Vtv">
+                            <connections>
+                                <action selector="userProfile:" destination="APa-TH-noV" id="o68-kL-hE5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Zx3-Ok-GDl" id="AP7-m0-g3f"/>
@@ -503,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQl-bu-ZAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7178.2608695652179" y="20.758928571428569"/>
+            <point key="canvasLocation" x="7343" y="0.0"/>
         </scene>
         <!--Booking View Controller-->
         <scene sceneID="Auv-y8-F2Y">
@@ -842,7 +854,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0c7-y6-4e3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6268.115942028986" y="20.758928571428569"/>
+            <point key="canvasLocation" x="6458" y="0.0"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

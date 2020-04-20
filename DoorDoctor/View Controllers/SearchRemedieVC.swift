@@ -74,4 +74,18 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         
     }
     
+    @IBAction func userProfile(_ sender: UIBarButtonItem) {
+        
+        
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "doctorListViewController") as? doctorListViewController
+//
+//        self.view.window?.makeKeyAndVisible()
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "doctorListViewController") as? infoViewController {
+            
+        
+                   if let navigator = navigationController {
+                       navigator.pushViewController(viewController, animated: true)
+                   }
+    }
+}
 }

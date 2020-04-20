@@ -159,4 +159,13 @@ class doctorListViewController: UIViewController,UITableViewDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
+    
+    @IBAction func userProfile(_ sender: UIBarButtonItem) {
+        
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "doctorListViewController") as? infoViewController {
+                   if let navigator = navigationController {
+                       navigator.pushViewController(viewController, animated: true)
+                   }
+    }
+}
 }

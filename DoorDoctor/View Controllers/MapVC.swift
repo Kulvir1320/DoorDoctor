@@ -173,4 +173,12 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
     }
     */
 
+    @IBAction func UserProfile(_ sender: UIBarButtonItem) {
+        
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "doctorListViewController") as? infoViewController {
+                   if let navigator = navigationController {
+                       navigator.pushViewController(viewController, animated: true)
+                   }
+    }
+}
 }

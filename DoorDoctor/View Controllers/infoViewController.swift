@@ -42,8 +42,8 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         self.tableView.rowHeight = 120
         //appointmentlist = [AppointmentList]()
-         info()
-        appointmentInfo()
+//         info()
+//        appointmentInfo()
         // Do any additional setup after loading the view.
     }
     
