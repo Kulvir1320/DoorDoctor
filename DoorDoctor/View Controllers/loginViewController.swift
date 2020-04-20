@@ -72,12 +72,14 @@ class loginViewController: UIViewController {
         let email = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        
+        self.CheckForUserNameAndPasswordMatch(email: email!, password: password!)
         Auth.auth().signIn(withEmail: email!, password: password!) { (result, error) in
             if error != nil{
                 self.showAlert(title: "OOPS!!", message: "Your password or email is incorrect.")
             }else{
                 self.loadHomeScreen()
+                
+                 userAccount.loggedInUser = email!
             
             }
         }
@@ -89,7 +91,7 @@ class loginViewController: UIViewController {
       //  let username = usernameTextField.text
      //   let password = passwordTextField.text
 
-      //  CheckForUserNameAndPasswordMatch(username: username!, password: password!)
+//        CheckForUserNameAndPasswordMatch(email: email!, password: password!)
       //  if(username == "" || password == ""){
 
      //    let alert = UIAlertController(title: "OPPs! Something went wrong ", message: "All fields are mandatory for Login", preferredStyle: UIAlertController.Style.alert)
@@ -131,15 +133,16 @@ class loginViewController: UIViewController {
     }
 
     
-    func CheckForUserNameAndPasswordMatch( username: String, password : String)
-    {
+    func CheckForUserNameAndPasswordMatch( email: String, password : String)
+    { print("check")
         let app = UIApplication.shared.delegate as! AppDelegate
 
         let context = app.persistentContainer.viewContext
 
         let fetchrequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
 
-        let predicate = NSPredicate(format: "username = %@", username)
+        let predicate = NSPredicate(format: "email = %@", email)
+        print(email)
 
         fetchrequest.predicate = predicate
         do
@@ -149,34 +152,36 @@ class loginViewController: UIViewController {
             if result.count>0
             {
                 let objectentity = result.firstObject as! UserInfo
+                print("inside object entity")
 
-//                if objectentity.username == username && objectentity.password == password
-//                {
+                if objectentity.email == email && objectentity.password == password
+                {
+                    print("inside object entity load home")
 //                    loadHomeScreen()
-//                    userAccount.loggedInUser = username
-//                    let alert = UIAlertController(title: "Welcome \(username)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
-//                    
-//                                                                                                 // add an action (button)
-//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                    
-//                                                                                                 // show the alert
-//                    self.present(alert, animated: true, completion: nil)
-//                    
-//                                                      print("You are login Successfully")
-//                }
-//                else
-//                {
-//
-//        let alert = UIAlertController(title: "OPPS! Something went wrong", message: "Username or Password is not Registered", preferredStyle: UIAlertController.Style.alert)
-//                    //
-//                                                                                                            // add an action (button)
-//    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//
-//                                                                                                            // show the alert
-//                self.present(alert, animated: true, completion: nil)
-//                    //                                  print("Please check your fields")
-//                    print("Wrong username or password !!!---")
-//                }
+                    userAccount.loggedInUser = email
+                    let alert = UIAlertController(title: "Welcome \(email)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
+
+                                                                                                 // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                                                                                                 // show the alert
+                    self.present(alert, animated: true, completion: nil)
+
+                                                      print("You are login Successfully")
+                }
+                else
+                {
+
+        let alert = UIAlertController(title: "OPPS! Something went wrong", message: "Username or Password is not Registered", preferredStyle: UIAlertController.Style.alert)
+                    //
+                                                                                                            // add an action (button)
+    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                                                                                                            // show the alert
+                self.present(alert, animated: true, completion: nil)
+                    //                                  print("Please check your fields")
+                    print("Wrong username or password !!!---")
+                }
             }
         }
 

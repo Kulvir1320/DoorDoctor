@@ -8,8 +8,15 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+extension  BookingViewController: UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound,.badge])
+    }
+}
 
-class BookingViewController: UIViewController {
+
+class BookingViewController: UIViewController  {
 
     @IBOutlet var dateLabel: UITextField!
     @IBOutlet var timeLabel: UITextField!
@@ -51,11 +58,16 @@ class BookingViewController: UIViewController {
         dPhoneLabel.text = String(Doctor.doctor[selectedIndex].phone)
         
         
+        
+        
+         UNUserNotificationCenter.current().delegate = self
+        
         datePickerLabel?.datePickerMode = .dateAndTime
                datePickerLabel?.minimumDate = Date.calculateData(day: 1, month: 1, year: 2020, hour: 0, minute: 0)
                datePickerLabel?.maximumDate = Date.calculateData(day: 31, month: 1, year: 2021, hour: 0, minute: 0)
         
     }
+    
     
     @objc func viewtapped()
     {
@@ -203,7 +215,7 @@ class BookingViewController: UIViewController {
                                content.body = "you have booked your appointment with \(dNameLabel.text!) at \(timeLabel.text!) on \(dateLabel.text!)"
                                content.sound = .default
                                content.badge = 1
-                               let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
+                               let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
                                let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: tigger)
                                center.add(request) { (error) in
                                    print("Erorr =\(error?.localizedDescription ?? "error local notification") " )

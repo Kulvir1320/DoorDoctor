@@ -178,7 +178,7 @@ class signupViewController: UIViewController {
     
     func saveCoreData(email: String, password: String, firstname: String, lastname: String,phone: Int) {
         
-        clearCoreData()
+//        clearCoreData()
         
          let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -210,6 +210,41 @@ class signupViewController: UIViewController {
                         print(error)
                       print("error")
                     }
+        
+         do {
+
+                                    print("---Data inside the database ---")
+                                var count = 0
+                                   let results = try managedContext.fetch(fetchRequest)
+                                   if results is [NSManagedObject] {
+                                    print("INside if")
+                                       for result in results as! [NSManagedObject] {
+
+                                        print("row---\(count)\n")
+                                       
+                                  let     email = result.value(forKey: "email") as! String
+                                    let   firstname = result.value( forKey: "firstname") as! String
+                                      let   lastname = result.value( forKey: "lastname") as! String
+        //                               let pw = result.value( forKey: "password") as! String
+                                     let   phone = result.value(forKey: "phone") as! Int
+
+        //                                print("\(un)--\(email)--\(pw)--\(fn)--\(ln)--\(ph)")
+        //                                print(username)
+                                        print("phone --------\(phone)")
+                                        print("email--------\(email)")
+                                        print("firstname-------\(firstname)")
+
+
+                                        print("end of row------\n")
+                                        count = count + 1
+
+                                       }
+                                   }
+                               } catch {
+                                print("error")
+                                   print(error)
+                               }
+
     }
     
     

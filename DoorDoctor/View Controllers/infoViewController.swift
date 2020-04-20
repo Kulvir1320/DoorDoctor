@@ -16,7 +16,7 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     
     
-    @IBOutlet weak var userNameLabel: UILabel!
+    
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var firstlastNameLabel: UILabel!
@@ -26,7 +26,7 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tableView: UITableView!
     
-    var username: String?
+    
     var firstname: String?
     var lastname: String?
     var email: String?
@@ -42,8 +42,8 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         self.tableView.rowHeight = 120
         //appointmentlist = [AppointmentList]()
-//         info()
-//        appointmentInfo()
+         info()
+        appointmentInfo()
         // Do any additional setup after loading the view.
     }
     
@@ -63,6 +63,7 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     // user info
     func info(){
+        print("inside info")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                       // second step is context
                    
@@ -70,7 +71,9 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 
                 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
         
-        fetchRequest.predicate = NSPredicate(format: "username = %@", userAccount.loggedInUser)
+        fetchRequest.predicate = NSPredicate(format: "email = %@", userAccount.loggedInUser)
+        
+        print(userAccount.loggedInUser)
         //
                        do {
 
@@ -78,10 +81,11 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                         var count = 0
                            let results = try managedContext.fetch(fetchRequest)
                            if results is [NSManagedObject] {
+                            print("INside if")
                                for result in results as! [NSManagedObject] {
 
                                 print("row---\(count)\n")
-                                username = result.value(forKey: "username") as! String
+                               
                                email = result.value(forKey: "email") as! String
                                firstname = result.value( forKey: "firstname") as! String
                                  lastname = result.value( forKey: "lastname") as! String
@@ -89,8 +93,10 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                                 phone = result.value(forKey: "phone") as! Int
 
 //                                print("\(un)--\(email)--\(pw)--\(fn)--\(ln)--\(ph)")
-                                print(username)
-                                
+//                                print(username)
+                                print("phone --------\(phone)")
+                                print("email--------\(email)")
+                                print("firstname-------\(firstname)")
 
 
                                 print("end of row------\n")
@@ -99,13 +105,14 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                                }
                            }
                        } catch {
+                        print("error")
                            print(error)
                        }
 
-        userNameLabel.text = username
-        firstlastNameLabel.text = "\(firstname!) \(lastname!)"
-        emailLabel.text = email
-        phoneLabel.text = String(phone!)
+//        userNameLabel.text = username
+        firstlastNameLabel?.text = "\(firstname!) \(lastname!)"
+        emailLabel.text = email!
+        phoneLabel?.text = String(phone!)
         
         
     }
@@ -137,7 +144,7 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                 for result in results as! [NSManagedObject] {
                     
                    let dname = result.value(forKey: "dName") as! String
-                    let uname = result.value(forKey: "uName") as! String
+//                    let uname = result.value(forKey: "uName") as! String
                     let uage = result.value(forKey: "uAge") as! Int
                     let uGender = result.value(forKey: "uGender") as! String
                     let uDate = result.value(forKey: "uDate") as! String
