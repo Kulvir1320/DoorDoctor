@@ -215,7 +215,16 @@ class BookingViewController: UIViewController  {
                                content.body = "you have booked your appointment with \(dNameLabel.text!) at \(timeLabel.text!) on \(dateLabel.text!)"
                                content.sound = .default
                                content.badge = 1
-                               let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                        
+                           let calendar = Calendar.current
+                                  let components = DateComponents(year: 2020, month: 04, day: 22, hour: 17, minute: 00) // Set the date here when you want Notification
+                                  let date = calendar.date(from: components)
+                                  let comp2 = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: date!)
+                                  let trigger = UNCalendarNotificationTrigger(dateMatching: comp2, repeats: false)
+//                         let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
+                        
+                        
+                               let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
                                let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: tigger)
                                center.add(request) { (error) in
                                    print("Erorr =\(error?.localizedDescription ?? "error local notification") " )

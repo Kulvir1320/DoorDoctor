@@ -14,7 +14,7 @@ import FirebaseFirestore
 
 class signupViewController: UIViewController {
     
-    @IBOutlet weak var UserNameTextField: UITextField!
+//    @IBOutlet weak var UserNameTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PhoneNmberTextField: UITextField!
@@ -47,7 +47,7 @@ class signupViewController: UIViewController {
     
     @objc func viewtapped()
     {
-        UserNameTextField.resignFirstResponder()
+//        UserNameTextField.resignFirstResponder()
         PasswordTextField.resignFirstResponder()
         EmailTextField.resignFirstResponder()
         PhoneNmberTextField.resignFirstResponder()
