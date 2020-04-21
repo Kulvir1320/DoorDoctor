@@ -17,6 +17,8 @@ class RemedieTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Remedies"
+        
         
         alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
 
@@ -29,6 +31,8 @@ class RemedieTVC: UITableViewController {
                present(alert!, animated: true, completion: nil)
         
         start()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -125,7 +129,7 @@ class RemedieTVC: UITableViewController {
     
     
     func start(){
-        let seconds = 5.0
+        let seconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds){
             
             self.alert?.dismiss(animated: false, completion: nil)

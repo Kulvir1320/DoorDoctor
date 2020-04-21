@@ -27,6 +27,8 @@ class loginViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
               self.view.addGestureRecognizer(tapGesture)
+        
+        self.navigationItem.title = "LogIn"
 //
         // Do any additional setup after loading the view.
          useraccount = [userAccount]()

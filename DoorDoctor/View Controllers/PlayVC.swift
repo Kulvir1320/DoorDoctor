@@ -14,11 +14,23 @@ class PlayVC: UIViewController {
     var item : Item?
     
     var webView: WKWebView?
+    
+    var alert : UIAlertController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)
+
+                      let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+                      loadingIndicator.hidesWhenStopped = true
+                      loadingIndicator.style = UIActivityIndicatorView.Style.medium
+                      loadingIndicator.startAnimating();
+
+                      alert!.view.addSubview(loadingIndicator)
+                      present(alert!, animated: true, completion: nil)
         
         webView = WKWebView(frame: view.frame)
         view.addSubview(webView!)
@@ -48,6 +60,7 @@ class PlayVC: UIViewController {
         
         let seconds = 3.0
                DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                self.alert?.dismiss(animated: false, completion: nil)
                    print(self.item?.id.videoID ?? "")
                    let request = URLRequest(url: URL(string: (PLAY_URL + (self.item?.id.videoID)!))!)
                    print("request player......................",request)

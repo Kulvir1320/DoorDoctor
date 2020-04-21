@@ -32,7 +32,7 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         // Do any additional setup after loading the view.
         
         Utilities.styleFilledButton(sButtonLbl)
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.title = "Search"
     }
     
     

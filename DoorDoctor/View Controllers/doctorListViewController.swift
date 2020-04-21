@@ -25,6 +25,8 @@ class doctorListViewController: UIViewController,UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.navigationItem.title = "Doctors"
 
 //        loadData()
         

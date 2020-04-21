@@ -34,6 +34,8 @@ class signupViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpElements()
         
+        self.navigationItem.title = "SignUp"
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
         self.view.addGestureRecognizer(tapGesture)
           useraccount = [userAccount]()
