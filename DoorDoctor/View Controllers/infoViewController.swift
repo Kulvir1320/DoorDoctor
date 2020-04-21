@@ -40,7 +40,7 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.rowHeight = 120
+       
         //appointmentlist = [AppointmentList]()
          info()
         appointmentInfo()
@@ -55,9 +55,11 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! infoCustomCellTableViewCell
+    
+//        cell.view.layer.cornerRadius = cell.cellView.frame.height / 2
         cell.doctorNameLabel.text = AppointmentList.appointList[indexPath.row].dname
-        cell.dateLabel.text = AppointmentList.appointList[indexPath.row].dDate
-        cell.timeLabel.text = AppointmentList.appointList[indexPath.row].dTime
+        cell.dateLabel.text = "On: \(AppointmentList.appointList[indexPath.row].dDate)"
+        cell.timeLabel.text = "At: \(AppointmentList.appointList[indexPath.row].dTime)"
         return cell
        }
     
