@@ -57,6 +57,10 @@
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Your location is needed when you use this application</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon.jpeg</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
