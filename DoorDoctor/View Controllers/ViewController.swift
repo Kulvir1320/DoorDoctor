@@ -47,6 +47,10 @@ class ViewController: UIViewController {
             videoLayer.bringSubviewToFront(stack)
             
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        playVideo()
+    }
 
 }
 
