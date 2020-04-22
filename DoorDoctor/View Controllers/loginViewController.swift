@@ -34,8 +34,8 @@ class loginViewController: UIViewController {
          useraccount = [userAccount]()
          setUpElements()
         
-        usernameTextField.text = "abc123@gmail.com"
-        passwordTextField.text = "abc123"
+        usernameTextField.text = "evneet123@gmail.com"
+        passwordTextField.text = "evneet123"
     }
     
 //

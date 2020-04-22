@@ -110,6 +110,7 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                         print("error")
                            print(error)
                        }
+        
 
 //        userNameLabel.text = username
         firstlastNameLabel?.text = "\(firstname!) \(lastname!)"
