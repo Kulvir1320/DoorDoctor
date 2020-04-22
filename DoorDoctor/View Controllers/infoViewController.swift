@@ -74,7 +74,7 @@ class infoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
         
         fetchRequest.predicate = NSPredicate(format: "email = %@", userAccount.loggedInUser)
-        
+        fetchRequest.returnsObjectsAsFaults = false
         print(userAccount.loggedInUser)
         //
                        do {

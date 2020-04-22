@@ -31,13 +31,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func check() {
-          if UserDefaults.standard.value(forKey: "email") != nil{
-              let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "homeviewController")
-              let navVC = UINavigationController(rootViewController: vc)
-              let share = UIApplication.shared.delegate as? AppDelegate
-              share?.window?.rootViewController = navVC
-              share?.window?.makeKeyAndVisible()
-          }
+        let ap = UIApplication.shared.delegate as! AppDelegate
+        let context = ap.persistentContainer.viewContext
+        let ft = NSFetchRequest<NSFetchRequestResult>(entityName: "LoggedInUser")
+        do{
+            let results = try context.fetch(ft)
+            if results.count > 0{
+                
+                if results is [NSManagedObject]{
+                    for r in results as! [NSManagedObject]{
+                        let e = r.value(forKey: "email")
+                    print("///////////////////////////",e)
+                    }
+                }
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "homeviewController")  as? hometabViewController
+                ap.window?.rootViewController = vc
+                ap.window?.makeKeyAndVisible()
+                
+                
+            }
+        }catch  {
+            print(error)
+        }
+        
       }
 
     // MARK: UISceneSession Lifecycle

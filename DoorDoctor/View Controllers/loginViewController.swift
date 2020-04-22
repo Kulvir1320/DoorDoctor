@@ -79,9 +79,27 @@ class loginViewController: UIViewController {
             if error != nil{
                 self.showAlert(title: "OOPS!!", message: "Your password or email is incorrect.")
             }else{
+                
                 self.loadHomeScreen()
                 
                  userAccount.loggedInUser = email!
+               
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let managedContext = appDelegate.persistentContainer.viewContext
+                
+//                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LoggedInUser")
+                do {
+                                    
+                let userEntity = NSEntityDescription.insertNewObject(forEntityName: "LoggedInUser", into: managedContext)
+                userEntity.setValue(email, forKey: "email")
+                                           
+                try   managedContext.save()
+
+            }
+            catch {
+                    print(error)
+                    print("error")
+                }
             
             }
         }
@@ -127,7 +145,8 @@ class loginViewController: UIViewController {
          //       navigator.pushViewController(viewController, animated: true)
           //  }
        // }
-        
+        UserDefaults.standard.set(usernameTextField.text!, forKey: "email")
+       print( UserDefaults.standard.data(forKey: "email"))
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "homeviewController") as? hometabViewController
 
         self.view.window?.rootViewController = vc
