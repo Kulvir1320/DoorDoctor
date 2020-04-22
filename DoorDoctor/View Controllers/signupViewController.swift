@@ -83,14 +83,23 @@ class signupViewController: UIViewController {
         let error = validateFeilds()
         
         if error != nil{
-            showError(message: error!)
-            print("therer is erroe with the feilds////////")
+            
+            showAlert(title: "Empty!!", message: "All feilds are required for registeration")
+//            showError(message: error!)
+//            print("therer is erroe with the feilds////////")
         }else{
             
             Auth.auth().createUser(withEmail: email!, password: password!) { (result, err) in
                 if err != nil{
-                    print(err?.localizedDescription)
-                    print("there is error while create user.//////////")
+                    
+                    if password!.count < 6{
+                        self.showAlert(title: "Wrong Password", message: "Enter 6 digit password")
+                    }else{
+                        self.showAlert(title: "Email!!", message: "Enter a valid email address")
+                        print(err?.localizedDescription)
+                        print("there is error while create user.//////////")
+                    }
+                    
                 }else{
                     let db = Firestore.firestore()
                     db.collection("users").addDocument(data: ["firstname": fname!,"lastname": lname!, "phone": phone!,"uid": result!.user.uid]) { (error) in
