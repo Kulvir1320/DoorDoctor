@@ -9,11 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
-extension  BookingViewController: UNUserNotificationCenterDelegate{
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound,.badge])
-    }
-}
+
 
 
 class BookingViewController: UIViewController  {
@@ -44,6 +40,10 @@ class BookingViewController: UIViewController  {
     var selectedIndex = -1
 
     override func viewDidLoad() {
+        
+        datePickerLabel.isHidden = true
+        
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
                      self.view.addGestureRecognizer(tapGesture)
         super.viewDidLoad()
@@ -116,51 +116,36 @@ class BookingViewController: UIViewController  {
     @IBAction func BookAppointment(_ sender: UIButton) {
         
        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                                     // second step is context
-                                  
-                              let managedContext = appDelegate.persistentContainer.viewContext
+                                    
+       let managedContext = appDelegate.persistentContainer.viewContext
                 
                 
                 let uName = uNameTxtField.text
+                let age = uAgeTxtField.text
                 let uAge = Int(uAgeTxtField.text ?? "0") ?? 0
-        //        let uPhone = Int(uPhoneTxtField.text ?? "0") ?? 0
                 let uGender = uGenderTxtField.text
                 var udate = dateLabel.text
                 let utime = timeLabel.text
                 let dName = dNameLabel.text
-                if(uName == "" || uAge == nil  || uGender == "" || udate == "" || utime == ""){
-                              
-                                   
-                                   let alert = UIAlertController(title: "OPPs! Something went ", message: "All fields are required for Registration", preferredStyle: UIAlertController.Style.alert)
+                if(uName == "" || age == ""  || uGender == "" || udate == "" || utime == ""){
+                    let alert = UIAlertController(title: "Empty!!", message: "All fields are required for Registration", preferredStyle: UIAlertController.Style.alert)
+                   
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
 
-                                                                                                         // add an action (button)
-                                                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                                                         // show the alert
-                                                 self.present(alert, animated: true, completion: nil)
-                                    } else {
+                    self.present(alert, animated: true, completion: nil)
                     
-                    
+                    } else {
+                 
                      let fetchRequest1 = NSFetchRequest<NSFetchRequestResult>(entityName: "Appointments")
-                    
-                    
-                            
+                   
                             do {
                                 let results = try managedContext.fetch(fetchRequest1)
                                 if results is [NSManagedObject] {
                                     for result in results as! [NSManagedObject] {
-                    //
-        //                                let dname = result.value(forKey: "dName") as! String
-        //                                let uname = result.value(forKey: "uName") as! String
-        //                                let uEmail = result.value(forKey: "uEmail") as! String
-        //                                let uGender = result.value(forKey: "uGender") as! String
-                                         uDate = result.value(forKey: "uDate") as! String
-        //                                let uPhone = result.value(forKey: "uPhone") as! Int
-                                         uTime = result.value(forKey: "uTime") as! String
-                                        
-                                        
-                                        
-                                        print(uTime)
+              
+                                     uDate = result.value(forKey: "uDate") as! String
+                                     uTime = result.value(forKey: "uTime") as! String
+                                    print(uTime)
                                     }
                                     
                                 }
@@ -170,33 +155,27 @@ class BookingViewController: UIViewController  {
                     if (uTime == utime && uDate == udate ){
                         let alert = UIAlertController(title: "Opps! ", message: "You are already booked at this time ", preferredStyle: UIAlertController.Style.alert)
 
-                                                                                                            // add an action (button)
-                                                              alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
 
-                                                                                                            // show the alert
-                                                              self.present(alert, animated: true, completion: nil)
+                            self.present(alert, animated: true, completion: nil)
                         
                     }else{
                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
-                //
+                
                                do {
 
                                     print("---Data inside the database ---")
-        //                        var count = 0
+      
                                    let results = try managedContext.fetch(fetchRequest)
                                    if results is [NSManagedObject] {
                                        for result in results as! [NSManagedObject] {
 
-        //                                print("row---\(count)\n")
-        //
+        
                                         ph = result.value(forKey: "phone") as! Int
-
-        //
-
 
 
                                         print("end of row------\n")
-        //                                count = count + 1
+      
 
                                        }
                                    }
@@ -221,9 +200,7 @@ class BookingViewController: UIViewController  {
                                   let date = calendar.date(from: components)
                                   let comp2 = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: date!)
                                   let trigger = UNCalendarNotificationTrigger(dateMatching: comp2, repeats: false)
-//                         let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
-                        
-                        
+
                                let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
                                let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: tigger)
                                center.add(request) { (error) in
@@ -243,19 +220,16 @@ class BookingViewController: UIViewController  {
                      bookEntity.setValue(book.Phone, forKey: "uPhone")
                      bookEntity.setValue(book.uTime, forKey: "uTime")
                            
-                           // save context
+    
                            do {
                                try managedContext.save()
                             let alert = UIAlertController(title: "Successfully", message: "You Appointment has Booked", preferredStyle: UIAlertController.Style.alert)
-
-                                                                                             // add an action (button)
-                                               alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                                             // show the alert
-                                               self.present(alert, animated: true, completion: nil)
+                            
+                             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                            
+                            self.present(alert, animated: true, completion: nil)
                             uNameTxtField.text = ""
                             uAgeTxtField.text = ""
-        //                    uPhoneTxtField.text = ""
                             uGenderTxtField.text = ""
                             dateLabel.text = ""
                             timeLabel.text = ""
@@ -290,10 +264,7 @@ class BookingViewController: UIViewController  {
             let results = try managedContext.fetch(fetchRequest)
             if results is [NSManagedObject] {
                 for result in results as! [NSManagedObject] {
-//                    let title = result.value(forKey: "title") as! String
-//                    let author = result.value(forKey: "author") as! String
-//                    let pages = result.value(forKey: "pages") as! Int
-//                    let year = result.value(forKey: "year") as! Int
+
                     let dname = result.value(forKey: "dName") as! String
                     let uname = result.value(forKey: "uName") as! String
                     let uage = result.value(forKey: "uAge") as! Int
@@ -319,4 +290,31 @@ class BookingViewController: UIViewController  {
         
     }
     
+    @IBAction func datetouchdown(_ sender: Any) {
+        
+        datePickerLabel.isHidden = false
+    }
+    
+    @IBAction func timetouchdown(_ sender: Any) {
+        
+        datePickerLabel.isHidden = false
+    }
+    
+    
+    @IBAction func dateeditend(_ sender: Any) {
+        datePickerLabel.isHidden = true
+    }
+    
+    
+    @IBAction func timeeditend(_ sender: Any) {
+        datePickerLabel.isHidden = true
+    }
+}
+
+extension  BookingViewController: UNUserNotificationCenterDelegate{
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound,.badge])
+    }
 }

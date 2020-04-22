@@ -674,11 +674,19 @@
                                         <rect key="frame" x="0.0" y="215.66666666666666" width="295" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="dateeditend:" destination="rZF-Ps-15F" eventType="editingDidEnd" id="udF-TP-B1V"/>
+                                            <action selector="datetouchdown:" destination="rZF-Ps-15F" eventType="touchDown" id="vYk-s9-ThJ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UhM-Ux-sdK">
                                         <rect key="frame" x="0.0" y="269.66666666666663" width="295" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="timeeditend:" destination="rZF-Ps-15F" eventType="editingDidEnd" id="5bN-To-4go"/>
+                                            <action selector="timetouchdown:" destination="rZF-Ps-15F" eventType="editingDidEnd" id="lge-hw-Wzb"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -698,19 +706,19 @@
                                 </constraints>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-if-EzN">
-                                <rect key="frame" x="30" y="569" width="315" height="150"/>
+                                <rect key="frame" x="30" y="488.33333333333326" width="315" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="nC5-Zr-IOR"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="EhQ-7z-etG"/>
                                 </constraints>
                                 <connections>
                                     <action selector="valueChanged:" destination="rZF-Ps-15F" eventType="valueChanged" id="jh6-Rr-0gz"/>
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="645-lY-Hc5">
-                                <rect key="frame" x="30" y="498.33333333333326" width="315" height="50"/>
+                                <rect key="frame" x="30" y="649" width="315" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JWS-3N-jVh"/>
+                                    <constraint firstAttribute="height" constant="50" id="YFI-oA-Po4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Book">
@@ -723,18 +731,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93662459389430941" green="1" blue="0.94767948427512128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="4Qv-Sa-VWz" firstAttribute="trailing" secondItem="xvT-if-EzN" secondAttribute="trailing" constant="30" id="DhN-k9-lHc"/>
-                            <constraint firstItem="4Qv-Sa-VWz" firstAttribute="trailing" secondItem="645-lY-Hc5" secondAttribute="trailing" constant="30" id="Gd3-E1-LgT"/>
+                            <constraint firstItem="xvT-if-EzN" firstAttribute="leading" secondItem="4Qv-Sa-VWz" secondAttribute="leading" constant="30" id="1o2-KA-N42"/>
+                            <constraint firstItem="645-lY-Hc5" firstAttribute="leading" secondItem="4Qv-Sa-VWz" secondAttribute="leading" constant="30" id="5Nh-TC-O0Z"/>
+                            <constraint firstItem="4Qv-Sa-VWz" firstAttribute="bottom" secondItem="645-lY-Hc5" secondAttribute="bottom" constant="30" id="H1t-vQ-kC3"/>
                             <constraint firstItem="Dlp-cF-sOu" firstAttribute="top" secondItem="4Qv-Sa-VWz" secondAttribute="top" constant="15" id="Ilo-Kb-f1Y"/>
+                            <constraint firstItem="4Qv-Sa-VWz" firstAttribute="trailing" secondItem="645-lY-Hc5" secondAttribute="trailing" constant="30" id="Iwc-mD-lqf"/>
                             <constraint firstItem="4Qv-Sa-VWz" firstAttribute="trailing" secondItem="Dlp-cF-sOu" secondAttribute="trailing" constant="10" id="KRD-hE-3ph"/>
-                            <constraint firstItem="645-lY-Hc5" firstAttribute="leading" secondItem="4Qv-Sa-VWz" secondAttribute="leading" constant="30" id="Lrh-A2-VdB"/>
-                            <constraint firstItem="645-lY-Hc5" firstAttribute="top" secondItem="5ZU-ki-296" secondAttribute="bottom" constant="40" id="RQU-hI-tao"/>
+                            <constraint firstItem="4Qv-Sa-VWz" firstAttribute="trailing" secondItem="xvT-if-EzN" secondAttribute="trailing" constant="30" id="Np2-4I-sGd"/>
                             <constraint firstItem="5ZU-ki-296" firstAttribute="leading" secondItem="4Qv-Sa-VWz" secondAttribute="leading" constant="40" id="S0Q-bJ-e74"/>
-                            <constraint firstItem="xvT-if-EzN" firstAttribute="leading" secondItem="4Qv-Sa-VWz" secondAttribute="leading" constant="30" id="bSo-uk-izd"/>
                             <constraint firstItem="5ZU-ki-296" firstAttribute="top" secondItem="Dlp-cF-sOu" secondAttribute="bottom" constant="10" id="fJb-LP-zjd"/>
                             <constraint firstAttribute="trailing" secondItem="5ZU-ki-296" secondAttribute="trailing" constant="40" id="iSF-us-GvH"/>
                             <constraint firstItem="Dlp-cF-sOu" firstAttribute="leading" secondItem="4Qv-Sa-VWz" secondAttribute="leading" constant="10" id="ka2-x4-DUU"/>
-                            <constraint firstItem="4Qv-Sa-VWz" firstAttribute="bottom" secondItem="xvT-if-EzN" secondAttribute="bottom" constant="10" id="qUb-0a-Pfj"/>
+                            <constraint firstItem="xvT-if-EzN" firstAttribute="top" secondItem="5ZU-ki-296" secondAttribute="bottom" constant="30" id="sfy-WZ-Jbr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Qv-Sa-VWz"/>
                     </view>
@@ -756,7 +764,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bu9-4d-KpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8146.3768115942039" y="-25.446428571428569"/>
+            <point key="canvasLocation" x="8144.8000000000002" y="-25.862068965517242"/>
         </scene>
         <!--Hometab View Controller-->
         <scene sceneID="7zA-9w-gHU">
