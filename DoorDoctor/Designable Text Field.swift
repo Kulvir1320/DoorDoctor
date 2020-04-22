@@ -25,7 +25,7 @@ class Designable_Text_Field: UITextField {
         if let image = leftImage {
             rightViewMode = .always
             
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+            let imageView = UIImageView(frame: CGRect(x:0, y: 0, width: 50, height: 50))
             imageView.image = image
             
             rightView = imageView
