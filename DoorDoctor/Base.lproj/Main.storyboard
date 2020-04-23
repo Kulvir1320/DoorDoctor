@@ -349,7 +349,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-6Z-6BY">
-                                <rect key="frame" x="1" y="214" width="373" height="597"/>
+                                <rect key="frame" x="1" y="268" width="373" height="543"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="OYc-zF-n7C" customClass="CardCell" customModule="DoorDoctor" customModuleProvider="target">
@@ -416,18 +416,27 @@
                                     <outlet property="delegate" destination="bQ5-4Q-bgk" id="UkE-VK-4Kn"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn More..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZw-xo-O6p">
+                                <rect key="frame" x="10" y="229" width="355" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Sp8-Mk-pp2" firstAttribute="leading" secondItem="8oh-oW-Fry" secondAttribute="leading" id="0rv-lo-27M"/>
                             <constraint firstAttribute="bottom" secondItem="zhL-6Z-6BY" secondAttribute="bottom" constant="1" id="3Kb-53-7Eh"/>
-                            <constraint firstItem="zhL-6Z-6BY" firstAttribute="top" secondItem="wq6-4B-MWW" secondAttribute="bottom" constant="5" id="3T5-uR-7JU"/>
+                            <constraint firstItem="zhL-6Z-6BY" firstAttribute="top" secondItem="xZw-xo-O6p" secondAttribute="bottom" constant="10" id="972-Bb-EBp"/>
                             <constraint firstItem="wq6-4B-MWW" firstAttribute="top" secondItem="Sp8-Mk-pp2" secondAttribute="bottom" constant="15" id="Gkx-r7-clG"/>
+                            <constraint firstItem="xZw-xo-O6p" firstAttribute="top" secondItem="wq6-4B-MWW" secondAttribute="bottom" constant="20" id="JLm-p1-Fdi"/>
                             <constraint firstItem="8oh-oW-Fry" firstAttribute="trailing" secondItem="wq6-4B-MWW" secondAttribute="trailing" constant="10" id="LiK-WS-AIA"/>
                             <constraint firstAttribute="trailing" secondItem="Sp8-Mk-pp2" secondAttribute="trailing" symbolic="YES" id="Vrn-d6-8uk"/>
+                            <constraint firstItem="xZw-xo-O6p" firstAttribute="leading" secondItem="8oh-oW-Fry" secondAttribute="leading" constant="10" id="WXI-kR-hJb"/>
                             <constraint firstAttribute="trailing" secondItem="zhL-6Z-6BY" secondAttribute="trailing" constant="1" id="X6G-Df-3DI"/>
                             <constraint firstItem="zhL-6Z-6BY" firstAttribute="leading" secondItem="8oh-oW-Fry" secondAttribute="leading" constant="1" id="aK2-s4-Tcx"/>
                             <constraint firstItem="Sp8-Mk-pp2" firstAttribute="top" secondItem="8oh-oW-Fry" secondAttribute="top" id="dwJ-54-2rG"/>
+                            <constraint firstItem="8oh-oW-Fry" firstAttribute="trailing" secondItem="xZw-xo-O6p" secondAttribute="trailing" constant="10" id="eFi-6p-pKP"/>
                             <constraint firstItem="wq6-4B-MWW" firstAttribute="leading" secondItem="8oh-oW-Fry" secondAttribute="leading" constant="10" id="nd6-N2-1fQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8oh-oW-Fry"/>
@@ -454,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S88-Ts-gCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4426.0869565217399" y="-454.01785714285711"/>
+            <point key="canvasLocation" x="4424.8000000000002" y="-454.43349753694582"/>
         </scene>
         <!--RemedieTVC-->
         <scene sceneID="Kxe-yj-Uan">
