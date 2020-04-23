@@ -35,6 +35,14 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         
         Utilities.styleFilledButton(sButtonLbl)
         self.navigationItem.title = "Search"
+        
+        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        self.view.addGestureRecognizer(tapgesture)
+        
+    }
+    
+    @objc func viewTapped(){
+        searchRemd.resignFirstResponder()
     }
     
     
