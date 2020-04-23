@@ -225,7 +225,7 @@ class BookingViewController: UIViewController  {
                                   let comp2 = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: date!)
                                   let trigger = UNCalendarNotificationTrigger(dateMatching: comp2, repeats: false)
 
-                               let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
+                               let tigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
                                let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: tigger)
                                center.add(request) { (error) in
                                    print("Erorr =\(error?.localizedDescription ?? "error local notification") " )
