@@ -74,11 +74,22 @@ class loginViewController: UIViewController {
         let email = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        self.CheckForUserNameAndPasswordMatch(email: email!, password: password!)
+        
         Auth.auth().signIn(withEmail: email!, password: password!) { (result, error) in
             if error != nil{
                 self.showAlert(title: "OOPS!!", message: "Your password or email is incorrect.")
             }else{
+                self.CheckForUserNameAndPasswordMatch(email: email!, password: password!)
+                let alert : UIAlertController?
+                alert = UIAlertController(title: nil, message: "Welcome...", preferredStyle: .alert)
+
+                let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+                loadingIndicator.hidesWhenStopped = true
+                loadingIndicator.style = UIActivityIndicatorView.Style.medium
+                loadingIndicator.startAnimating();
+
+                alert!.view.addSubview(loadingIndicator)
+                self.present(alert!, animated: true, completion: nil)
                 
                 self.loadHomeScreen()
                 
@@ -180,29 +191,9 @@ class loginViewController: UIViewController {
                     print("inside object entity load home")
 //                    loadHomeScreen()
                     userAccount.loggedInUser = email
-                    let alert = UIAlertController(title: "Welcome \(email)", message: " You are successfully login", preferredStyle: UIAlertController.Style.alert)
-
-                                                                                                 // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                                                 // show the alert
-                    self.present(alert, animated: true, completion: nil)
-
-                                                      print("You are login Successfully")
+                 
                 }
-                else
-                {
-
-        let alert = UIAlertController(title: "OPPS! Something went wrong", message: "Username or Password is not Registered", preferredStyle: UIAlertController.Style.alert)
-                    //
-                                                                                                            // add an action (button)
-    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                                                                                                            // show the alert
-                self.present(alert, animated: true, completion: nil)
-                    //                                  print("Please check your fields")
-                    print("Wrong username or password !!!---")
-                }
+                
             }
         }
 
