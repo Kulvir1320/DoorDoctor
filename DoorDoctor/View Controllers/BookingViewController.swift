@@ -16,6 +16,12 @@ class BookingViewController: UIViewController  {
 
     @IBOutlet var dateLabel: UITextField!
     @IBOutlet var timeLabel: UITextField!
+    
+    
+    @IBOutlet weak var dlabel: UILabel!
+    
+    @IBOutlet weak var tlabel: UILabel!
+    
     @IBOutlet var datePickerLabel: UIDatePicker!
     
     
@@ -41,12 +47,21 @@ class BookingViewController: UIViewController  {
 
     override func viewDidLoad() {
         
-        datePickerLabel.isHidden = true
-        
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
-                     self.view.addGestureRecognizer(tapGesture)
+       
         super.viewDidLoad()
+        
+        datePickerLabel.isHidden = true
+               
+               
+               let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
+                            self.view.addGestureRecognizer(tapGesture)
+        
+        let tgdate = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        dlabel.addGestureRecognizer(tgdate)
+        
+        let tgtime = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        tlabel.addGestureRecognizer(tgtime)
+    
          setUpElements()
         // Do any additional setup after loading the view.
         print(Doctor.doctor[selectedIndex].name)
@@ -75,9 +90,13 @@ class BookingViewController: UIViewController  {
         uEmailTxtField.resignFirstResponder()
         uAgeTxtField.resignFirstResponder()
         uGenderTxtField.resignFirstResponder()
-        dateLabel.resignFirstResponder()
-        timeLabel.resignFirstResponder()
+//        dateLabel.resignFirstResponder()
+//        timeLabel.resignFirstResponder()
       
+    }
+    
+    @objc func labelTapped() {
+        datePickerLabel.isHidden = false
     }
     
    func setUpElements() {
@@ -92,9 +111,14 @@ class BookingViewController: UIViewController  {
      Utilities.styleTextField(uAgeTxtField)
      Utilities.styleTextField(uGenderTxtField)
     
-     Utilities.styleTextField(dateLabel)
-     Utilities.styleTextField(timeLabel)
+//     Utilities.styleTextField(dateLabel)
+//     Utilities.styleTextField(timeLabel)
      Utilities.styleFilledButton(bookButton)
+    
+    Utilities.styleTextLabel(dlabel)
+    Utilities.styleTextLabel(tlabel)
+    
+    
    }
     /*
     // MARK: - Navigation
@@ -108,8 +132,8 @@ class BookingViewController: UIViewController  {
 
     @IBAction func valueChanged(_ sender: UIDatePicker) {
         
-        dateLabel?.text = " \(sender.date.getDayMonthYearHourMinuteSecond().day)-\(sender.date.getDayMonthYearHourMinuteSecond().month)-\(sender.date.getDayMonthYearHourMinuteSecond().year)"
-        timeLabel.text = " \(sender.date.getDayMonthYearHourMinuteSecond().hour):\(sender.date.getDayMonthYearHourMinuteSecond().minute)"
+        dlabel?.text = " \(sender.date.getDayMonthYearHourMinuteSecond().day)-\(sender.date.getDayMonthYearHourMinuteSecond().month)-\(sender.date.getDayMonthYearHourMinuteSecond().year)"
+        tlabel.text = " \(sender.date.getDayMonthYearHourMinuteSecond().hour):\(sender.date.getDayMonthYearHourMinuteSecond().minute)"
     }
     
     
@@ -124,8 +148,8 @@ class BookingViewController: UIViewController  {
                 let age = uAgeTxtField.text
                 let uAge = Int(uAgeTxtField.text ?? "0") ?? 0
                 let uGender = uGenderTxtField.text
-                var udate = dateLabel.text
-                let utime = timeLabel.text
+                var udate = dlabel.text
+                let utime = tlabel.text
                 let dName = dNameLabel.text
                 if(uName == "" || age == ""  || uGender == "" || udate == "" || utime == ""){
                     let alert = UIAlertController(title: "Empty!!", message: "All fields are required for Registration", preferredStyle: UIAlertController.Style.alert)
@@ -191,7 +215,7 @@ class BookingViewController: UIViewController  {
                                
                                let content = UNMutableNotificationContent()
                                content.title = "DoorDoctor Reminder"
-                               content.body = "you have booked your appointment with \(dNameLabel.text!) at \(timeLabel.text!) on \(dateLabel.text!)"
+                               content.body = "you have booked your appointment with \(dNameLabel.text!) at \(tlabel.text!) on \(dlabel.text!)"
                                content.sound = .default
                                content.badge = 1
                         
@@ -231,8 +255,8 @@ class BookingViewController: UIViewController  {
                             uNameTxtField.text = ""
                             uAgeTxtField.text = ""
                             uGenderTxtField.text = ""
-                            dateLabel.text = ""
-                            timeLabel.text = ""
+                            dlabel.text = ""
+                            tlabel.text = ""
                            } catch {
                                print(error)
                            }
@@ -290,6 +314,8 @@ class BookingViewController: UIViewController  {
         
     }
     
+    
+    
     @IBAction func datetouchdown(_ sender: Any) {
         
         datePickerLabel.isHidden = false
@@ -309,6 +335,8 @@ class BookingViewController: UIViewController  {
     @IBAction func timeeditend(_ sender: Any) {
         datePickerLabel.isHidden = true
     }
+    
+    
 }
 
 extension  BookingViewController: UNUserNotificationCenterDelegate{
@@ -317,4 +345,6 @@ extension  BookingViewController: UNUserNotificationCenterDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound,.badge])
     }
+    
+    
 }

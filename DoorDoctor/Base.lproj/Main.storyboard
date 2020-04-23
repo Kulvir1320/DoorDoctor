@@ -657,7 +657,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-ki-296">
-                                <rect key="frame" x="40" y="154.66666666666666" width="295" height="303.66666666666674"/>
+                                <rect key="frame" x="40" y="154.66666666666666" width="295" height="294.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQS-G1-qzx">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="33.666666666666664"/>
@@ -680,43 +680,43 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWX-iB-cmd">
+                                    <label opaque="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C71-gb-niJ">
                                         <rect key="frame" x="0.0" y="215.66666666666666" width="295" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="dateeditend:" destination="rZF-Ps-15F" eventType="editingDidEnd" id="udF-TP-B1V"/>
-                                            <action selector="datetouchdown:" destination="rZF-Ps-15F" eventType="touchDown" id="vYk-s9-ThJ"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UhM-Ux-sdK">
-                                        <rect key="frame" x="0.0" y="269.66666666666663" width="295" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="timeeditend:" destination="rZF-Ps-15F" eventType="editingDidEnd" id="5bN-To-4go"/>
-                                            <action selector="timetouchdown:" destination="rZF-Ps-15F" eventType="editingDidEnd" id="lge-hw-Wzb"/>
-                                        </connections>
-                                    </textField>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="x6K-IW-vM3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMo-I1-35a">
+                                        <rect key="frame" x="0.0" y="269.66666666666663" width="295" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="jvs-nS-Edk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="UhM-Ux-sdK" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="0dm-KI-vwO"/>
-                                    <constraint firstAttribute="trailing" secondItem="RWX-iB-cmd" secondAttribute="trailing" id="1KK-zy-Ccr"/>
                                     <constraint firstAttribute="trailing" secondItem="uyz-WJ-rHf" secondAttribute="trailing" id="2Oc-pk-Unj"/>
+                                    <constraint firstAttribute="trailing" secondItem="fMo-I1-35a" secondAttribute="trailing" id="3le-3q-z0K"/>
                                     <constraint firstItem="EQS-G1-qzx" firstAttribute="top" secondItem="5ZU-ki-296" secondAttribute="top" id="EEI-on-6zv"/>
                                     <constraint firstItem="GpB-kw-aZ8" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="Gpq-lJ-RzP"/>
                                     <constraint firstAttribute="trailing" secondItem="EQS-G1-qzx" secondAttribute="trailing" id="KXg-cx-slR"/>
+                                    <constraint firstItem="C71-gb-niJ" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="PMT-t9-M3K"/>
                                     <constraint firstItem="EQS-G1-qzx" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="Siu-Um-boH"/>
                                     <constraint firstAttribute="trailing" secondItem="IZP-bW-3lJ" secondAttribute="trailing" id="Z5e-gY-1bD"/>
                                     <constraint firstItem="IZP-bW-3lJ" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="e7N-vN-fyQ"/>
                                     <constraint firstAttribute="trailing" secondItem="GpB-kw-aZ8" secondAttribute="trailing" id="eUc-vV-anM"/>
+                                    <constraint firstItem="fMo-I1-35a" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="gnW-Bp-R2M"/>
+                                    <constraint firstAttribute="trailing" secondItem="C71-gb-niJ" secondAttribute="trailing" id="iCd-hp-nD0"/>
                                     <constraint firstItem="uyz-WJ-rHf" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="jdw-5A-L73"/>
-                                    <constraint firstItem="RWX-iB-cmd" firstAttribute="leading" secondItem="5ZU-ki-296" secondAttribute="leading" id="uZQ-GO-PfJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="UhM-Ux-sdK" secondAttribute="trailing" id="yeJ-hw-YfH"/>
                                 </constraints>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-if-EzN">
-                                <rect key="frame" x="30" y="488.33333333333326" width="315" height="150"/>
+                                <rect key="frame" x="30" y="479.33333333333326" width="315" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="EhQ-7z-etG"/>
                                 </constraints>
@@ -763,9 +763,9 @@
                         <outlet property="dEmailLabel" destination="ukI-gL-sYm" id="C6g-Bm-hXz"/>
                         <outlet property="dNameLabel" destination="LSj-6X-eYI" id="vN3-2y-lr5"/>
                         <outlet property="dPhoneLabel" destination="dQS-Yb-NhP" id="pEM-mT-tfE"/>
-                        <outlet property="dateLabel" destination="RWX-iB-cmd" id="bhl-1Y-Uqh"/>
                         <outlet property="datePickerLabel" destination="xvT-if-EzN" id="mOO-o1-ddx"/>
-                        <outlet property="timeLabel" destination="UhM-Ux-sdK" id="1CH-en-CAu"/>
+                        <outlet property="dlabel" destination="C71-gb-niJ" id="Umo-eq-EJO"/>
+                        <outlet property="tlabel" destination="fMo-I1-35a" id="ozZ-GZ-8Ad"/>
                         <outlet property="uAgeTxtField" destination="GpB-kw-aZ8" id="YGg-EF-6U3"/>
                         <outlet property="uEmailTxtField" destination="GpB-kw-aZ8" id="uzn-rc-qKk"/>
                         <outlet property="uGenderTxtField" destination="uyz-WJ-rHf" id="TdP-Az-iY1"/>
