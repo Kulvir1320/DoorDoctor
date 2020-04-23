@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import FirebaseAuth
+import FirebaseFirestore
 
 class loginViewController: UIViewController {
 
@@ -79,6 +80,20 @@ class loginViewController: UIViewController {
             if error != nil{
                 self.showAlert(title: "OOPS!!", message: "Your password or email is incorrect.")
             }else{
+                
+                let db = Firestore.firestore()
+                let docref = db.collection("users").document(email!)
+                docref.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    print("Document data: \(dataDescription)")
+                } else {
+                    print("Document does not exist")
+                }
+                    
+                }
+                    
+                    
                 self.CheckForUserNameAndPasswordMatch(email: email!, password: password!)
                 let alert : UIAlertController?
                 alert = UIAlertController(title: nil, message: "Welcome...", preferredStyle: .alert)

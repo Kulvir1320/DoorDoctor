@@ -102,16 +102,28 @@ class signupViewController: UIViewController {
                     
                 }else{
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstname": fname!,"lastname": lname!, "phone": phone!,"uid": result!.user.uid]) { (error) in
-                        if error != nil{
-                            print("///////////////////")
-                        }
-                        else{
-                            self.showAlert(title: "Congratulations", message: "You are succesfully registered")
-                            
-                          
-                        }
+                    
+                    db.collection("users").document(email!).setData(["firstname": fname!,"lastname": lname!, "phone": phone!,"uid": result!.user.uid]) { (error) in
+                          if error != nil{
+                                                  print("///////////////////")
+                                              }
+                                              else{
+                                                  self.showAlert(title: "Congratulations", message: "You are succesfully registered")
+                                                  
+                                                
+                                              }
                     }
+                    
+//                    db.collection("users").addDocument(data: ["firstname": fname!,"lastname": lname!, "phone": phone!,"uid": result!.user.uid]) { (error) in
+//                        if error != nil{
+//                            print("///////////////////")
+//                        }
+//                        else{
+//                            self.showAlert(title: "Congratulations", message: "You are succesfully registered")
+//
+//
+//                        }
+//                    }
                     
                     self.saveCoreData(email: email!, password: password!, firstname: fname!, lastname: lname!, phone: pInt)
                     
