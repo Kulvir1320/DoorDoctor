@@ -36,9 +36,9 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
         
         
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showDirection))
-        
-        mapView.addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showDirection))
+//
+//        mapView.addGestureRecognizer(tapGesture)
         getNearbyLandmark()
         
 }
@@ -106,6 +106,85 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
         
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation{
+            print("view for anoo//////////")
+
+            return nil
+        }
+        else{
+            print("view for anoo...............")
+            let av = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationView") ?? MKAnnotationView()
+            av.image = UIImage(named: "icon")
+            av.canShowCallout = true
+            av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            return av
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        print("//////call out")
+//        guard let annotation = view.annotation as? LandmarkAnnotation , let title = annotation.title else{
+//
+//            return
+//        }
+//
+        let allOverlays = mapView.overlays
+               if allOverlays.count > 0 {
+                   mapView.removeOverlays(allOverlays)
+                   
+               }
+        
+        let annotation = view.annotation as? LandmarkAnnotation
+               
+        destination = annotation?.coordinate
+               
+               let sourceplacemark = MKPlacemark(coordinate: source!)
+               let destinationplacemark = MKPlacemark(coordinate: destination!)
+                                             
+            let sourceMapItem = MKMapItem(placemark: sourceplacemark)
+            let destinationMapItem = MKMapItem(placemark: destinationplacemark)
+
+                                             
+                let directionRequest = MKDirections.Request()
+                                             directionRequest.source = sourceMapItem
+                                             directionRequest.destination = destinationMapItem
+                      directionRequest.transportType = .automobile
+                                     
+                                     print("after direction")
+                                             
+                let directions = MKDirections(request: directionRequest)
+                                             
+                    directions.calculate { (response, error) in
+                    guard let response = response else{
+                        if let error = error{
+                    let alert = UIAlertController(title: "OOPS", message: "Directions not available", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                                                      alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                            print("Error: \(error)")
+                                                     }
+                        return
+                                                 }
+                                                 
+                                                 print("in calculate")
+                                                 
+                        let route = response.routes[0]
+                        self.mapView.addOverlay((route.polyline))
+                      //                           self.mapView.addOverlay((route.polyline), level: MKOverlayLevel.aboveRoads)
+                                                 print("add overlay")
+                                                 
+                                let rect = route.polyline.boundingMapRect
+                                                 self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+                                                 print("set region")
+                                             
+                                             }
+                         
+    }
+    
+    
+    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor.red
@@ -143,13 +222,17 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
                    
                    print("inside for.................")
                    print(lmark.coordinate)
-                print(lmark.name)
+                   print(lmark.name)
                    let annotaion = MKPointAnnotation()
                    print(lmark.coordinate)
                    annotaion.coordinate = lmark.coordinate
+                annotaion.title = lmark.name
                    mapView.addAnnotation(annotaion)
+                
                }
     }
+    
+    
     
     
     func  getNearbyLandmark(){
@@ -171,6 +254,8 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
         
         
     }
+    
+    
     /*
     // MARK: - Navigation
 
