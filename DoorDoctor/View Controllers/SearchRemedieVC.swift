@@ -13,6 +13,9 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     @IBOutlet weak var searchRemd: UISearchBar!
     
+    
+    @IBOutlet weak var learnlbl: UILabel!
+    
     @IBOutlet weak var sButtonLbl: UIButton!
     
     @IBOutlet var cardTableView: UITableView!
@@ -37,7 +40,7 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         self.navigationItem.title = "Search"
         
         let tapgesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
-        self.view.addGestureRecognizer(tapgesture)
+        learnlbl.addGestureRecognizer(tapgesture)
         
     }
     

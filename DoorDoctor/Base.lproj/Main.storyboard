@@ -416,7 +416,7 @@
                                     <outlet property="delegate" destination="bQ5-4Q-bgk" id="UkE-VK-4Kn"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn More..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZw-xo-O6p">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn More..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZw-xo-O6p">
                                 <rect key="frame" x="10" y="229" width="355" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -457,6 +457,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cardTableView" destination="zhL-6Z-6BY" id="pen-Ig-3gK"/>
+                        <outlet property="learnlbl" destination="xZw-xo-O6p" id="l9h-BU-3ye"/>
                         <outlet property="sButtonLbl" destination="wq6-4B-MWW" id="KRp-mY-ljj"/>
                         <outlet property="searchRemd" destination="Sp8-Mk-pp2" id="Fix-7c-PF4"/>
                     </connections>
@@ -1018,7 +1019,7 @@
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GGO-bg-Rq6"/>
+        <segue reference="Agd-rC-s51"/>
         <segue reference="Li7-tf-iBD"/>
     </inferredMetricsTieBreakers>
 </document>
