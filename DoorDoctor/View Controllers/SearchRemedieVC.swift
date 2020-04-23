@@ -19,6 +19,8 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     var addbtn : UIBarButtonItem!
     
+    var webItem = -1
+    
     let pictures: [UIImage] = [UIImage(named: "fever.jpg")!, UIImage(named: "headache.jpeg")! , UIImage(named: "CoughCold.png")!,UIImage(named: "Stomachache.jpg")!]
     let titles: [String] = ["Fever","Headache", "ColdCough", "Stomachache"]
     let descriptions: [String] = ["Fever is when a human's body temperature goes above the normal range of 36–37° Centigrade.","Headache is pain in any region of the head.This may occur on one or both sides of the head.", "ColdCough is a self-limited contagious disease that can be caused by different types of viruses.","A stomach ache is refer to cramps or a dull ache in the tummy .It's usually short-lived."]
@@ -54,15 +56,26 @@ class SearchRemedieVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if let cell = sender as? UITableViewCell{
+//            webItem = tableView.indexPath(for: cell)!.row
+            webItem = cardTableView.indexPath(for: cell)!.row
+        }
+        
+        if let play = segue.destination as? WebViewVC{
+           let u = WebUrl[webItem]
+            play.url = u
+           
+        }
     }
-    */
+
     
     
     @IBAction func searchBA(_ sender: Any) {

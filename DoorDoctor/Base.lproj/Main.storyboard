@@ -407,6 +407,7 @@
                                             <outlet property="descriptionLabel" destination="14j-Lg-1DY" id="nz2-pu-lx5"/>
                                             <outlet property="pictureView" destination="BjQ-bP-SLt" id="WLG-hG-BLt"/>
                                             <outlet property="titleLabel" destination="Aiu-eV-woa" id="6PU-PF-Gc4"/>
+                                            <segue destination="IgQ-5N-Z2S" kind="show" id="B9v-Kd-5df"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -979,6 +980,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0c7-y6-4e3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6458" y="0.0"/>
+        </scene>
+        <!--Web ViewVC-->
+        <scene sceneID="qwQ-Hy-oxc">
+            <objects>
+                <viewController storyboardIdentifier="webView" id="IgQ-5N-Z2S" customClass="WebViewVC" customModule="DoorDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xk4-5P-QLO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3pa-SH-qNn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jaG-yg-2ZR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHh-Fp-pvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4425" y="-1357"/>
         </scene>
     </scenes>
     <resources>

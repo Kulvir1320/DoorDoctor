@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424EA481245134D700699E6E /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA480245134D700699E6E /* WebViewVC.swift */; };
+		424EA48324513A6600699E6E /* CardViewUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA48224513A6600699E6E /* CardViewUrls.swift */; };
 		4263127C244ABEA000099046 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4263127B244ABEA000099046 /* GoogleService-Info.plist */; };
 		4280479E2440261500C43156 /* doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4280479D2440261500C43156 /* doctor.png */; };
 		428047F324479AEC00C43156 /* SearchRemedieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428047F224479AEC00C43156 /* SearchRemedieVC.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		424EA480245134D700699E6E /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		424EA48224513A6600699E6E /* CardViewUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewUrls.swift; sourceTree = "<group>"; };
 		4263127B244ABEA000099046 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4280479D2440261500C43156 /* doctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor.png; sourceTree = "<group>"; };
 		428047F224479AEC00C43156 /* SearchRemedieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemedieVC.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				8C4A4873243D4CC800F6B20E /* signupViewController.swift */,
 				61DF0E8824456C8800E472BA /* doctorListViewController.swift */,
 				8C4A4871243D4CB600F6B20E /* loginViewController.swift */,
+				424EA480245134D700699E6E /* WebViewVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				428047F624479EB600C43156 /* helperR.swift */,
 				BD571F862448E492000A24A6 /* ContentView.swift */,
 				BD57200D244A996C000A24A6 /* CardCell.swift */,
+				424EA48224513A6600699E6E /* CardViewUrls.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -443,7 +449,9 @@
 				BD571F8C2448E98D000A24A6 /* Landmark.swift in Sources */,
 				BD571F902448E9DD000A24A6 /* LocalManager.swift in Sources */,
 				61DF0E8D244583B700E472BA /* customTableViewCell.swift in Sources */,
+				424EA48324513A6600699E6E /* CardViewUrls.swift in Sources */,
 				428047FB2447AA0E00C43156 /* RemedieTVC.swift in Sources */,
+				424EA481245134D700699E6E /* WebViewVC.swift in Sources */,
 				BD5070D624451A1A0070DD5A /* Designable Text Field.swift in Sources */,
 				8C4A485B243D495500F6B20E /* AppDelegate.swift in Sources */,
 				8CC8F27824491CB200A7C037 /* infoCustomCellTableViewCell.swift in Sources */,
