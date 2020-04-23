@@ -116,6 +116,7 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
             print("view for anoo...............")
             let av = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationView") ?? MKAnnotationView()
             av.image = UIImage(named: "icon")
+            
             av.canShowCallout = true
             av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             return av
@@ -125,20 +126,18 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         print("//////call out")
-//        guard let annotation = view.annotation as? LandmarkAnnotation , let title = annotation.title else{
-//
-//            return
-//        }
-//
+       
         let allOverlays = mapView.overlays
                if allOverlays.count > 0 {
                    mapView.removeOverlays(allOverlays)
                    
                }
         
-        let annotation = view.annotation as? LandmarkAnnotation
+        let ann = view.annotation
+        
+      
                
-        destination = annotation?.coordinate
+        destination = ann?.coordinate
                
                let sourceplacemark = MKPlacemark(coordinate: source!)
                let destinationplacemark = MKPlacemark(coordinate: destination!)
@@ -227,6 +226,7 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
                    print(lmark.coordinate)
                    annotaion.coordinate = lmark.coordinate
                 annotaion.title = lmark.name
+                annotaion.subtitle = lmark.title
                    mapView.addAnnotation(annotaion)
                 
                }
@@ -299,6 +299,17 @@ class MapVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
         zoomRegion.span.latitudeDelta = zoomRegion.span.latitudeDelta*2
         zoomRegion.span.longitudeDelta = zoomRegion.span.longitudeDelta*2
         mapView.setRegion(zoomRegion, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let allOverlays = mapView.overlays
+               if allOverlays.count > 0 {
+                   mapView.removeOverlays(allOverlays)
+                   
+               }
+        getNearbyLandmark()
+        
     }
     
     
